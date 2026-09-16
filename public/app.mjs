@@ -15,7 +15,7 @@ function renderExperiment(replayed=false){
  for(const t of [0,12,24,36,48])html+=`<text class="chart-tick" x="${x(t)}" y="213" text-anchor="middle">${t}</text>`;
  html+='<text class="chart-tick" x="655" y="230" text-anchor="end">trading round</text>';
  if(scenario==='shock')html+=`<line x1="${x(20)}" x2="${x(20)}" y1="18" y2="194" stroke="var(--amber)" stroke-dasharray="3 4" opacity=".7"/><text class="chart-tick" x="${x(20)+7}" y="15">information shock</text>`;
- html+=`<path d="${line(baseline.series)}" fill="none" stroke="#8b8b86" stroke-width="2" stroke-dasharray="4 4"/><path d="${line(run.series)}" fill="none" stroke="var(--green)" stroke-width="2.5"/><circle cx="${x(48)}" cy="${y(run.series.at(-1).price)}" r="4" fill="var(--green)"/>`;
+ html+=`<path d="${line(baseline.series)}" fill="none" stroke="#8b8b86" stroke-width="2" stroke-dasharray="4 4"/><path d="${line(run.series)}" fill="none" stroke="var(--amber)" stroke-width="2.5"/><circle cx="${x(48)}" cy="${y(run.series.at(-1).price)}" r="4" fill="var(--green)"/>`;
  svg.innerHTML=html;
  const metrics=[['Quantity fill rate',percent(run.fillRate),percent(baseline.fillRate)+' baseline'],['Two-sided mean spread',run.spread==null?'—':(run.spread*100).toFixed(1)+'¢',run.spreadSamples+'/48 sampled rounds'],['Traded value',run.volume.toLocaleString('en-US',{maximumFractionDigits:0}),'synthetic credits'],['Top-10 volume share',percent(run.concentration),percent(baseline.concentration)+' baseline']];
  $('experiment-metrics').innerHTML=metrics.map(([label,value,note])=>`<div><span>${label}</span><strong>${value}</strong><small>${note}</small></div>`).join('');

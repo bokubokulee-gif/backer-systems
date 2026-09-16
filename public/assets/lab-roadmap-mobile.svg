@@ -55,7 +55,7 @@
   <path class="flow next" d="M396 352h16v509h-16"/>
   <path class="cohort" d="M113 390v16h237v49"/>
 
-  <text class="lane green" x="24" y="433">(b) TEST A MARKET</text>
+  <text class="lane amber" x="24" y="433">(b) TEST A MARKET</text>
   <rect class="node" x="24" y="455" width="372" height="62"/>
   <text class="heading" x="40" y="481">Candidate contract</text>
   <text class="muted" x="40" y="506">Rules · fees · horizon · resolution</text>
