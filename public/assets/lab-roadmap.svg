@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">Backer AI Lab: simulator architecture and prelaunch market experiments</title>
+  <desc id="desc">Two connected technical lanes. Source-dated context and synthetic personas feed a memory, retrieve, reflect, plan and act policy loop. A frozen population is evaluated against held-out behavior. The same population enters four paired experiments: baseline, changed fees, changed liquidity and an information shock. Funded order-book replay produces market-quality metrics for a launch gate. A dashed planned validation path returns externally resolved outcomes through calibration to the agent policy. Solid nodes show prototype components; dashed nodes show research next.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 7 3.5 0 7Z" fill="#a7a5a1"/></marker>
+    <marker id="amber-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 7 3.5 0 7Z" fill="#e9bd86"/></marker>
+    <marker id="green-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 7 3.5 0 7Z" fill="#00dd94"/></marker>
+    <style>
+      text{font-family:"Helvetica Neue",Arial,sans-serif;fill:#f5f3ee;font-size:14px}
+      .lane{font-size:16px;font-weight:600;letter-spacing:1px}
+      .heading{font-size:16px;font-weight:600}
+      .muted{fill:#aba9a5}
+      .amber{fill:#e9bd86}
+      .green{fill:#00dd94}
+      .node{fill:#111113;stroke:#5c5a57;stroke-width:1.2;rx:3}
+      .policy{fill:#171410;stroke:#e9bd86;stroke-width:1.2;rx:4}
+      .next{stroke-dasharray:5 4}
+      .flow{fill:none;stroke:#a7a5a1;stroke-width:1.3;marker-end:url(#arrow)}
+      .branch{fill:none;stroke:#777672;stroke-width:1.2}
+      .cohort{fill:none;stroke:#e9bd86;stroke-width:1.3;marker-end:url(#amber-arrow)}
+      .feedback{fill:none;stroke:#00dd94;stroke-width:1.3;stroke-dasharray:5 4;marker-end:url(#green-arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="480" fill="#08080a"/>
+
+  <text class="lane amber" x="24" y="29">(a) BUILD THE SIMULATOR</text>
+  <path d="M855 24h27" stroke="#aba9a5" stroke-width="1.4"/>
+  <text class="muted" x="891" y="29">Prototype</text>
+  <path d="M997 24h27" stroke="#aba9a5" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text class="muted" x="1033" y="29">Research next</text>
+
+  <rect class="node" x="24" y="53" width="180" height="52"/>
+  <text class="heading" x="38" y="76">Dated context</text>
+  <text class="muted" x="38" y="95">Exposure · choices</text>
+  <rect class="node" x="24" y="123" width="180" height="57"/>
+  <text class="heading" x="38" y="146">Synthetic personas</text>
+  <text class="muted" x="38" y="167">Consented cohorts: next</text>
+  <path class="branch" d="M204 79h16v72h-16"/>
+  <path class="flow" d="M220 116h20"/>
+
+  <rect class="policy" x="240" y="53" width="480" height="127"/>
+  <text class="heading amber" x="257" y="78">Behavioral policy πθ</text>
+  <text class="muted" x="474" y="78">State + memory + constraints</text>
+  <rect class="node" x="256" y="99" width="94" height="39"/>
+  <text x="303" y="124" text-anchor="middle">Memory</text>
+  <rect class="node" x="366" y="99" width="94" height="39"/>
+  <text x="413" y="124" text-anchor="middle">Retrieve</text>
+  <rect class="node" x="476" y="99" width="94" height="39"/>
+  <text x="523" y="124" text-anchor="middle">Reflect</text>
+  <rect class="node" x="586" y="99" width="118" height="39"/>
+  <text x="645" y="124" text-anchor="middle">Plan / act</text>
+  <path class="flow" d="M350 119h16"/>
+  <path class="flow" d="M460 119h16"/>
+  <path class="flow" d="M570 119h16"/>
+  <path class="flow" d="M645 138v24H303v-24"/>
+  <rect x="385" y="150" width="177" height="22" fill="#171410"/>
+  <text class="muted" x="474" y="166" text-anchor="middle">Experience → memory</text>
+
+  <path class="flow" d="M720 117h38"/>
+  <rect class="node" x="758" y="68" width="170" height="96"/>
+  <text class="heading" x="843" y="96" text-anchor="middle">Freeze population</text>
+  <text class="muted" x="843" y="121" text-anchor="middle">Same agents · seeds</text>
+  <text class="muted" x="843" y="144" text-anchor="middle">Budgets · priors</text>
+  <path class="flow next" d="M928 117h41"/>
+  <rect class="node next" x="969" y="68" width="207" height="96"/>
+  <text class="heading" x="1072.5" y="96" text-anchor="middle">Held-out checks</text>
+  <text class="muted" x="1072.5" y="121" text-anchor="middle">Behavior · calibration</text>
+  <text class="muted" x="1072.5" y="144" text-anchor="middle">Cohort / time holdouts</text>
+
+  <path class="flow next" d="M1072 164v127"/>
+  <text class="muted" x="1085" y="230">Validation</text>
+  <path class="cohort" d="M843 164v47H244v83"/>
+  <rect x="418" y="200" width="299" height="22" fill="#08080a"/>
+  <text class="amber" x="567.5" y="216" text-anchor="middle">Same population. Change one condition.</text>
+
+  <text class="lane green" x="24" y="249">(b) TEST A MARKET</text>
+  <text class="muted" x="272" y="273">Paired experiments</text>
+  <rect class="node" x="24" y="291" width="180" height="100"/>
+  <text class="heading" x="38" y="320">Candidate contract</text>
+  <text class="muted" x="38" y="345">Rules · fees · horizon</text>
+  <text class="muted" x="38" y="369">Objective resolution</text>
+  <path class="branch" d="M204 341h40M244 296v93"/>
+  <path class="flow" d="M244 296h27"/>
+  <path class="flow" d="M244 327h27"/>
+  <path class="flow" d="M244 358h27"/>
+  <path class="flow" d="M244 389h27"/>
+  <rect class="node" x="271" y="284" width="152" height="25"/>
+  <text x="347" y="302" text-anchor="middle">Baseline</text>
+  <rect class="node" x="271" y="315" width="152" height="25"/>
+  <text x="347" y="333" text-anchor="middle">Δ Fees</text>
+  <rect class="node" x="271" y="346" width="152" height="25"/>
+  <text x="347" y="364" text-anchor="middle">Δ Liquidity</text>
+  <rect class="node" x="271" y="377" width="152" height="25"/>
+  <text x="347" y="395" text-anchor="middle">Information shock</text>
+  <path class="branch" d="M423 296h24v93h-24M423 327h24M423 358h24"/>
+  <path class="flow" d="M447 341h48"/>
+
+  <rect x="495" y="291" width="196" height="100" rx="3" fill="#0b1914" stroke="#00dd94" stroke-width="1.2"/>
+  <text class="heading green" x="593" y="320" text-anchor="middle">Order-book replay</text>
+  <text class="muted" x="593" y="345" text-anchor="middle">Funded agents · fills</text>
+  <text class="muted" x="593" y="369" text-anchor="middle">Price–time · cash · inventory</text>
+  <path class="flow" d="M691 341h43"/>
+  <rect class="node" x="734" y="291" width="186" height="100"/>
+  <text class="heading" x="827" y="320" text-anchor="middle">Compare outcomes</text>
+  <text class="muted" x="827" y="345" text-anchor="middle">Depth · spread · churn</text>
+  <text class="muted" x="827" y="369" text-anchor="middle">Slippage · concentration</text>
+  <path class="flow next" d="M920 341h45"/>
+  <rect class="node next" x="965" y="291" width="211" height="100"/>
+  <text class="heading" x="1070.5" y="320" text-anchor="middle">Launch gate</text>
+  <text class="muted" x="1070.5" y="345" text-anchor="middle">Integrity · stress · validity</text>
+  <text class="muted" x="1070.5" y="369" text-anchor="middle">Pass / revise / reject</text>
+
+  <path class="feedback" d="M1071 391v20h-89v15"/>
+  <rect class="node next" x="890" y="426" width="184" height="32"/>
+  <text class="green" x="982" y="447" text-anchor="middle">Resolved outcomes</text>
+  <path class="feedback" d="M890 442h-58"/>
+  <rect class="node next" x="636" y="426" width="196" height="32"/>
+  <text class="green" x="734" y="447" text-anchor="middle">Calibration → policy</text>
+  <path class="feedback" d="M636 442H228V194h252v-14"/>
+  <rect x="268" y="430" width="326" height="23" fill="#08080a"/>
+  <text class="green" x="431" y="447" text-anchor="middle">Validation path · planned</text>
+</svg>
