@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="550" viewBox="0 0 560 550" role="img" aria-labelledby="title desc">
-  <title id="title">Backer revenue flywheel</title>
-  <desc id="desc">A proposed clockwise economic loop: creator participation, audience discovery, executed trades, collected trading fees, creator royalties and platform reinvestment, then improved market quality that may attract the next cycle. Fees are one pool split between creators and the platform, not two independent revenue pools. Investor collateral is not platform revenue. Growth is conditional.</desc>
+  <title id="title" data-i18n="s082">Backer revenue flywheel</title>
+  <desc id="desc" data-i18n="s083">A proposed clockwise economic loop: creator participation, audience discovery, executed trades, collected trading fees, creator royalties and platform reinvestment, then improved market quality that may attract the next cycle. Fees are one pool split between creators and the platform, not two independent revenue pools. Investor collateral is not platform revenue. Growth is conditional.</desc>
   <defs>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#e9bd86"/></marker>
     <style>
@@ -21,46 +21,46 @@
   <path d="M109.28 265.96 A172 172 0 0 1 109.28 224.04" fill="none" stroke="#e9bd86" stroke-width="1.8" marker-end="url(#arrow)"/>
   <path d="M176.49 107.63 A172 172 0 0 1 212.79 86.67" fill="none" stroke="#e9bd86" stroke-width="1.8" marker-end="url(#arrow)"/>
   <circle cx="280" cy="245" r="88" fill="#15120e" stroke="#e9bd86" stroke-opacity=".5" stroke-width="1.2"/>
-  <text x="280" y="213" font-size="22" fill="#f5f3ee">One fee pool</text>
-  <text x="280" y="247" font-size="18" fill="#e9bd86">creator + liquidity</text>
-  <text x="280" y="273" font-size="18" fill="#e9bd86">+ platform share</text>
-  <text x="280" y="304" font-size="17" fill="#aba9a5">Split once</text>
-  <g aria-label="01 Creator participation">
+  <text x="280" y="213" font-size="22" fill="#f5f3ee" data-i18n="s084">One fee pool</text>
+  <text x="280" y="247" font-size="18" fill="#e9bd86" data-i18n="s085">creator + liquidity</text>
+  <text x="280" y="273" font-size="18" fill="#e9bd86" data-i18n="s086">+ platform share</text>
+  <text x="280" y="304" font-size="17" fill="#aba9a5" data-i18n="s087">Split once</text>
+  <g aria-label="01 Creator participation" data-i18n-aria-label="s088">
     <circle cx="280.00" cy="73.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="280.00" y="44.00" style="fill:#e9bd86">01</text>
-    <text class="label" x="280.00" y="75.00" style="font-size:22px">Creator</text>
-    <text class="label" x="280.00" y="100.00" style="font-size:20px">participation</text>
+    <text class="label" x="280.00" y="75.00" style="font-size:22px" data-i18n="s089">Creator</text>
+    <text class="label" x="280.00" y="100.00" style="font-size:20px" data-i18n="s090">participation</text>
   </g>
-  <g aria-label="02 Audience discovery">
+  <g aria-label="02 Audience discovery" data-i18n-aria-label="s091">
     <circle cx="428.96" cy="159.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="428.96" y="130.00" style="fill:#e9bd86">02</text>
-    <text class="label" x="428.96" y="161.00" style="font-size:22px">Audience</text>
-    <text class="label" x="428.96" y="186.00" style="font-size:22px">discovery</text>
+    <text class="label" x="428.96" y="161.00" style="font-size:22px" data-i18n="s092">Audience</text>
+    <text class="label" x="428.96" y="186.00" style="font-size:22px" data-i18n="s093">discovery</text>
   </g>
-  <g aria-label="03 Executed trades">
+  <g aria-label="03 Executed trades" data-i18n-aria-label="s094">
     <circle cx="428.96" cy="331.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="428.96" y="302.00" style="fill:#e9bd86">03</text>
-    <text class="label" x="428.96" y="333.00" style="font-size:22px">Executed</text>
-    <text class="label" x="428.96" y="358.00" style="font-size:22px">trades</text>
+    <text class="label" x="428.96" y="333.00" style="font-size:22px" data-i18n="s095">Executed</text>
+    <text class="label" x="428.96" y="358.00" style="font-size:22px" data-i18n="s096">trades</text>
   </g>
-  <g aria-label="04 Collected fees">
+  <g aria-label="04 Collected fees" data-i18n-aria-label="s097">
     <circle cx="280.00" cy="417.00" r="64" fill="#0b1a14" stroke="#00dd94" stroke-width="1.4"/>
     <text class="number" x="280.00" y="388.00" style="fill:#00dd94">04</text>
-    <text class="label" x="280.00" y="419.00" style="font-size:22px">Collected</text>
-    <text class="label" x="280.00" y="444.00" style="font-size:22px">fees</text>
+    <text class="label" x="280.00" y="419.00" style="font-size:22px" data-i18n="s098">Collected</text>
+    <text class="label" x="280.00" y="444.00" style="font-size:22px" data-i18n="s099">fees</text>
   </g>
-  <g aria-label="05 Royalties + reinvestment">
+  <g aria-label="05 Royalties + reinvestment" data-i18n-aria-label="s100">
     <circle cx="131.04" cy="331.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="131.04" y="302.00" style="fill:#e9bd86">05</text>
-    <text class="label" x="131.04" y="333.00" style="font-size:22px">Royalties +</text>
-    <text class="label" x="131.04" y="358.00" style="font-size:20px">reinvestment</text>
+    <text class="label" x="131.04" y="333.00" style="font-size:22px" data-i18n="s101">Royalties +</text>
+    <text class="label" x="131.04" y="358.00" style="font-size:20px" data-i18n="s102">reinvestment</text>
   </g>
-  <g aria-label="06 Market quality">
+  <g aria-label="06 Market quality" data-i18n-aria-label="s103">
     <circle cx="131.04" cy="159.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="131.04" y="130.00" style="fill:#e9bd86">06</text>
-    <text class="label" x="131.04" y="161.00" style="font-size:22px">Market</text>
-    <text class="label" x="131.04" y="186.00" style="font-size:22px">quality</text>
+    <text class="label" x="131.04" y="161.00" style="font-size:22px" data-i18n="s104">Market</text>
+    <text class="label" x="131.04" y="186.00" style="font-size:22px" data-i18n="s105">quality</text>
   </g>
-  <text class="foot" x="280" y="510">Proposed loop · growth depends on market quality.</text>
-  <text class="foot" x="280" y="533">One fee pool. Collateral is not revenue.</text>
+  <text class="foot" x="280" y="510" data-i18n="s106">Proposed loop · growth depends on market quality.</text>
+  <text class="foot" x="280" y="533" data-i18n="s107">One fee pool. Collateral is not revenue.</text>
 </svg>

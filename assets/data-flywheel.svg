@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="550" viewBox="0 0 560 550" role="img" aria-labelledby="title desc">
-  <title id="title">Backer data flywheel</title>
-  <desc id="desc">A proposed clockwise learning loop: observe context, simulate decisions, test market rules, record real actions, resolve external outcomes, and calibrate models before the next cycle. The center is a decision-to-outcome evidence record. This is a system architecture, not a claim of achieved predictive validity.</desc>
+  <title id="title" data-i18n="s001">Backer data flywheel</title>
+  <desc id="desc" data-i18n="s002">A proposed clockwise learning loop: observe context, simulate decisions, test market rules, record real actions, resolve external outcomes, and calibrate models before the next cycle. The center is a decision-to-outcome evidence record. This is a system architecture, not a claim of achieved predictive validity.</desc>
   <defs>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#e9bd86"/></marker>
     <style>
@@ -21,46 +21,46 @@
   <path d="M109.28 265.96 A172 172 0 0 1 109.28 224.04" fill="none" stroke="#e9bd86" stroke-width="1.8" marker-end="url(#arrow)"/>
   <path d="M176.49 107.63 A172 172 0 0 1 212.79 86.67" fill="none" stroke="#e9bd86" stroke-width="1.8" marker-end="url(#arrow)"/>
   <circle cx="280" cy="245" r="88" fill="#15120e" stroke="#e9bd86" stroke-opacity=".5" stroke-width="1.2"/>
-  <text x="280" y="213" font-size="24" fill="#f5f3ee">Decision</text>
+  <text x="280" y="213" font-size="24" fill="#f5f3ee" data-i18n="s003">Decision</text>
   <text x="280" y="242" font-size="23" fill="#e9bd86">↓</text>
-  <text x="280" y="271" font-size="24" fill="#f5f3ee">Outcome</text>
-  <text x="280" y="302" font-size="17" fill="#aba9a5">Evidence record</text>
-  <g aria-label="01 Observe context">
+  <text x="280" y="271" font-size="24" fill="#f5f3ee" data-i18n="s004">Outcome</text>
+  <text x="280" y="302" font-size="17" fill="#aba9a5" data-i18n="s005">Evidence record</text>
+  <g aria-label="01 Observe context" data-i18n-aria-label="s006">
     <circle cx="280.00" cy="73.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="280.00" y="44.00" style="fill:#e9bd86">01</text>
-    <text class="label" x="280.00" y="75.00" style="font-size:22px">Observe</text>
-    <text class="label" x="280.00" y="100.00" style="font-size:22px">context</text>
+    <text class="label" x="280.00" y="75.00" style="font-size:22px" data-i18n="s007">Observe</text>
+    <text class="label" x="280.00" y="100.00" style="font-size:22px" data-i18n="s008">context</text>
   </g>
-  <g aria-label="02 Simulate decisions">
+  <g aria-label="02 Simulate decisions" data-i18n-aria-label="s009">
     <circle cx="428.96" cy="159.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="428.96" y="130.00" style="fill:#e9bd86">02</text>
-    <text class="label" x="428.96" y="161.00" style="font-size:22px">Simulate</text>
-    <text class="label" x="428.96" y="186.00" style="font-size:22px">decisions</text>
+    <text class="label" x="428.96" y="161.00" style="font-size:22px" data-i18n="s010">Simulate</text>
+    <text class="label" x="428.96" y="186.00" style="font-size:22px" data-i18n="s011">decisions</text>
   </g>
-  <g aria-label="03 Test market rules">
+  <g aria-label="03 Test market rules" data-i18n-aria-label="s012">
     <circle cx="428.96" cy="331.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="428.96" y="302.00" style="fill:#e9bd86">03</text>
-    <text class="label" x="428.96" y="333.00" style="font-size:22px">Test market</text>
-    <text class="label" x="428.96" y="358.00" style="font-size:22px">rules</text>
+    <text class="label" x="428.96" y="333.00" style="font-size:22px" data-i18n="s013">Test market</text>
+    <text class="label" x="428.96" y="358.00" style="font-size:22px" data-i18n="s014">rules</text>
   </g>
-  <g aria-label="04 Record actions">
+  <g aria-label="04 Record actions" data-i18n-aria-label="s015">
     <circle cx="280.00" cy="417.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="280.00" y="388.00" style="fill:#e9bd86">04</text>
-    <text class="label" x="280.00" y="419.00" style="font-size:22px">Record</text>
-    <text class="label" x="280.00" y="444.00" style="font-size:22px">actions</text>
+    <text class="label" x="280.00" y="419.00" style="font-size:22px" data-i18n="h159">Record</text>
+    <text class="label" x="280.00" y="444.00" style="font-size:22px" data-i18n="s016">actions</text>
   </g>
-  <g aria-label="05 Resolve outcomes">
+  <g aria-label="05 Resolve outcomes" data-i18n-aria-label="s017">
     <circle cx="131.04" cy="331.00" r="64" fill="#0b1a14" stroke="#00dd94" stroke-width="1.4"/>
     <text class="number" x="131.04" y="302.00" style="fill:#00dd94">05</text>
-    <text class="label" x="131.04" y="333.00" style="font-size:22px">Resolve</text>
-    <text class="label" x="131.04" y="358.00" style="font-size:22px">outcomes</text>
+    <text class="label" x="131.04" y="333.00" style="font-size:22px" data-i18n="s018">Resolve</text>
+    <text class="label" x="131.04" y="358.00" style="font-size:22px" data-i18n="s019">outcomes</text>
   </g>
-  <g aria-label="06 Calibrate models">
+  <g aria-label="06 Calibrate models" data-i18n-aria-label="s020">
     <circle cx="131.04" cy="159.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="131.04" y="130.00" style="fill:#e9bd86">06</text>
-    <text class="label" x="131.04" y="161.00" style="font-size:22px">Calibrate</text>
-    <text class="label" x="131.04" y="186.00" style="font-size:22px">models</text>
+    <text class="label" x="131.04" y="161.00" style="font-size:22px" data-i18n="s021">Calibrate</text>
+    <text class="label" x="131.04" y="186.00" style="font-size:22px" data-i18n="s022">models</text>
   </g>
-  <text class="foot" x="280" y="510">Proposed loop · external outcomes govern learning.</text>
-  <text class="foot" x="280" y="533">Synthetic activity alone is not new evidence.</text>
+  <text class="foot" x="280" y="510" data-i18n="s023">Proposed loop · external outcomes govern learning.</text>
+  <text class="foot" x="280" y="533" data-i18n="s024">Synthetic activity alone is not new evidence.</text>
 </svg>

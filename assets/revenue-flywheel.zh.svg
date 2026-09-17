@@ -1,0 +1,66 @@
+<svg lang="zh-Hans" xmlns="http://www.w3.org/2000/svg" width="560" height="550" viewBox="0 0 560 550" role="img" aria-labelledby="title desc">
+  <title id="title" data-i18n="s082">Backer 收入飞轮</title>
+  <desc id="desc" data-i18n="s083">规划中的顺时针经济闭环：创作者参与、受众发现、真实成交、收取交易手续费、创作者分成与平台再投入，再以改善的市场质量吸引下一轮参与。手续费属于同一资金池，由创作者与平台分配，并非两个独立收入池。投资者抵押资金不构成平台收入。增长依赖实际条件。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#e9bd86"/></marker>
+    <style>
+      text{font-family:"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;fill:#f5f3ee;text-anchor:middle}
+      .label{font-size:22px;font-weight:500}
+      .number{font-size:16px;font-weight:600;fill:#e9bd86;letter-spacing:1px}
+      .sub{font-size:18px;fill:#aba9a5}
+      .foot{font-size:16px;fill:#aba9a5}
+    </style>
+  </defs>
+  <circle cx="280" cy="245" r="244" fill="#08080a"/>
+  <circle cx="280" cy="245" r="172" fill="none" stroke="#e9bd86" stroke-opacity=".13" stroke-width="1"/>
+
+  <path d="M347.21 86.67 A172 172 0 0 1 383.51 107.63" fill="none" stroke="#e9bd86" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <path d="M450.72 224.04 A172 172 0 0 1 450.72 265.96" fill="none" stroke="#e9bd86" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <path d="M383.51 382.37 A172 172 0 0 1 347.21 403.33" fill="none" stroke="#e9bd86" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <path d="M212.79 403.33 A172 172 0 0 1 176.49 382.37" fill="none" stroke="#e9bd86" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <path d="M109.28 265.96 A172 172 0 0 1 109.28 224.04" fill="none" stroke="#e9bd86" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <path d="M176.49 107.63 A172 172 0 0 1 212.79 86.67" fill="none" stroke="#e9bd86" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <circle cx="280" cy="245" r="88" fill="#15120e" stroke="#e9bd86" stroke-opacity=".5" stroke-width="1.2"/>
+  <text x="280" y="213" font-size="22" fill="#f5f3ee" data-i18n="s084">同一手续费池</text>
+  <text x="280" y="247" font-size="18" fill="#e9bd86" data-i18n="s085">创作者 + 流动性</text>
+  <text x="280" y="273" font-size="18" fill="#e9bd86" data-i18n="s086">+ 平台分成</text>
+  <text x="280" y="304" font-size="17" fill="#aba9a5" data-i18n="s087">一次分配</text>
+  <g aria-label="01 创作者参与" data-i18n-aria-label="s088">
+    <circle cx="280.00" cy="73.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
+    <text class="number" x="280.00" y="44.00" style="fill:#e9bd86">01</text>
+    <text class="label" x="280.00" y="75.00" style="font-size:22px" data-i18n="s089">创作者</text>
+    <text class="label" x="280.00" y="100.00" style="font-size:20px" data-i18n="s090">参与</text>
+  </g>
+  <g aria-label="02 受众发现" data-i18n-aria-label="s091">
+    <circle cx="428.96" cy="159.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
+    <text class="number" x="428.96" y="130.00" style="fill:#e9bd86">02</text>
+    <text class="label" x="428.96" y="161.00" style="font-size:22px" data-i18n="s092">受众</text>
+    <text class="label" x="428.96" y="186.00" style="font-size:22px" data-i18n="s093">发现</text>
+  </g>
+  <g aria-label="03 交易成交" data-i18n-aria-label="s094">
+    <circle cx="428.96" cy="331.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
+    <text class="number" x="428.96" y="302.00" style="fill:#e9bd86">03</text>
+    <text class="label" x="428.96" y="333.00" style="font-size:22px" data-i18n="s095">交易</text>
+    <text class="label" x="428.96" y="358.00" style="font-size:22px" data-i18n="s096">成交</text>
+  </g>
+  <g aria-label="04 收取手续费" data-i18n-aria-label="s097">
+    <circle cx="280.00" cy="417.00" r="64" fill="#0b1a14" stroke="#00dd94" stroke-width="1.4"/>
+    <text class="number" x="280.00" y="388.00" style="fill:#00dd94">04</text>
+    <text class="label" x="280.00" y="419.00" style="font-size:22px" data-i18n="s098">收取</text>
+    <text class="label" x="280.00" y="444.00" style="font-size:22px" data-i18n="s099">手续费</text>
+  </g>
+  <g aria-label="05 分成 + 再投入" data-i18n-aria-label="s100">
+    <circle cx="131.04" cy="331.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
+    <text class="number" x="131.04" y="302.00" style="fill:#e9bd86">05</text>
+    <text class="label" x="131.04" y="333.00" style="font-size:22px" data-i18n="s101">分成 +</text>
+    <text class="label" x="131.04" y="358.00" style="font-size:20px" data-i18n="s102">再投入</text>
+  </g>
+  <g aria-label="06 市场质量" data-i18n-aria-label="s103">
+    <circle cx="131.04" cy="159.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
+    <text class="number" x="131.04" y="130.00" style="fill:#e9bd86">06</text>
+    <text class="label" x="131.04" y="161.00" style="font-size:22px" data-i18n="s104">市场</text>
+    <text class="label" x="131.04" y="186.00" style="font-size:22px" data-i18n="s105">质量</text>
+  </g>
+  <text class="foot" x="280" y="510" data-i18n="s106">规划中的闭环 · 增长取决于市场质量。</text>
+  <text class="foot" x="280" y="533" data-i18n="s107">同一手续费池。抵押资金不构成收入。</text>
+</svg>

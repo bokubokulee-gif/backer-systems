@@ -1,26 +1,29 @@
+import {initializeLanguage,translate as tr,numberLocale} from './i18n.mjs?v=74fbd3c14053';
+initializeLanguage();
 import {simulateMarket,economics,binaryPayoff,SCENARIOS} from './model.mjs';
 const $=id=>document.getElementById(id);
-const money=(n,d=0)=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:d,minimumFractionDigits:d}).format(n);
+const money=(n,d=0)=>new Intl.NumberFormat(numberLocale(),{style:'currency',currency:'USD',maximumFractionDigits:d,minimumFractionDigits:d}).format(n);
 const percent=n=>(n*100).toFixed(1)+'%';
 const text=(id,value)=>{$(id).textContent=value;};
 const baseline=simulateMarket('baseline',41);
 const descriptions={baseline:'Reference: 72% participation ceiling per round; a 1% fee on each side of each fill.',thin:'The participation ceiling falls from 72% to 24%. The same funded traders and belief process face less available liquidity.',fees:'The fee on each side rises from 1% to 3.5%. Participation and starting resources stay fixed; orders account for their higher cost.',shock:'A shared attention signal changes beliefs from round 20. Fees, starting funds and participation stay fixed.'};
 function renderExperiment(replayed=false){
- const scenario=$('scenario').value,run=simulateMarket(scenario,41);text('scenario-copy',descriptions[scenario]);
+ const scenario=$('scenario').value,run=simulateMarket(scenario,41);text('scenario-copy',tr(descriptions[scenario]));
  const x=t=>45+t/48*610,y=p=>194-p*160;
  const line=data=>data.map((d,i)=>(i?'L':'M')+x(d.t).toFixed(1)+','+y(d.price).toFixed(1)).join(' ');
  const svg=$('market-chart');
- let html='<title>Synthetic YES-equivalent prices over 48 rounds: baseline versus '+SCENARIOS[scenario].label+'</title>';
+ svg.setAttribute('aria-label',tr('Synthetic YES-equivalent prices over 48 rounds: baseline versus {scenario}',{scenario:tr(SCENARIOS[scenario].label)}));
+ let html='<title>'+tr('Synthetic YES-equivalent prices over 48 rounds: baseline versus {scenario}',{scenario:tr(SCENARIOS[scenario].label)})+'</title>';
  for(const tick of [0,.25,.5,.75,1])html+=`<line class="chart-grid" x1="45" x2="655" y1="${y(tick)}" y2="${y(tick)}"/><text class="chart-tick" x="32" y="${y(tick)+3}" text-anchor="end">${Math.round(tick*100)}¢</text>`;
  for(const t of [0,12,24,36,48])html+=`<text class="chart-tick" x="${x(t)}" y="213" text-anchor="middle">${t}</text>`;
- html+='<text class="chart-tick" x="655" y="230" text-anchor="end">trading round</text>';
- if(scenario==='shock')html+=`<line x1="${x(20)}" x2="${x(20)}" y1="18" y2="194" stroke="var(--amber)" stroke-dasharray="3 4" opacity=".7"/><text class="chart-tick" x="${x(20)+7}" y="15">information shock</text>`;
+ html+='<text class="chart-tick" x="655" y="230" text-anchor="end">'+tr('trading round')+'</text>';
+ if(scenario==='shock')html+=`<line x1="${x(20)}" x2="${x(20)}" y1="18" y2="194" stroke="var(--amber)" stroke-dasharray="3 4" opacity=".7"/><text class="chart-tick" x="${x(20)+7}" y="15">${tr('information shock')}</text>`;
  html+=`<path d="${line(baseline.series)}" fill="none" stroke="#8b8b86" stroke-width="2" stroke-dasharray="4 4"/><path d="${line(run.series)}" fill="none" stroke="var(--amber)" stroke-width="2.5"/><circle cx="${x(48)}" cy="${y(run.series.at(-1).price)}" r="4" fill="var(--green)"/>`;
  svg.innerHTML=html;
- const metrics=[['Quantity fill rate',percent(run.fillRate),percent(baseline.fillRate)+' baseline'],['Two-sided mean spread',run.spread==null?'—':(run.spread*100).toFixed(1)+'¢',run.spreadSamples+'/48 sampled rounds'],['Traded value',run.volume.toLocaleString('en-US',{maximumFractionDigits:0}),'synthetic credits'],['Top-10 volume share',percent(run.concentration),percent(baseline.concentration)+' baseline']];
- $('experiment-metrics').innerHTML=metrics.map(([label,value,note])=>`<div><span>${label}</span><strong>${value}</strong><small>${note}</small></div>`).join('');
+ const metrics=[['Quantity fill rate',percent(run.fillRate),tr('{value} baseline',{value:percent(baseline.fillRate)})],['Two-sided mean spread',run.spread==null?'—':(run.spread*100).toFixed(1)+'¢',tr('{count}/48 sampled rounds',{count:run.spreadSamples})],['Traded value',run.volume.toLocaleString(numberLocale(),{maximumFractionDigits:0}),tr('synthetic credits')],['Top-10 volume share',percent(run.concentration),tr('{value} baseline',{value:percent(baseline.concentration)})]];
+ $('experiment-metrics').innerHTML=metrics.map(([label,value,note])=>`<div><span>${tr(label)}</span><strong>${value}</strong><small>${note}</small></div>`).join('');
  const conserved=Object.values(run.invariants).every(Boolean);
- text('experiment-status',(replayed?'Replayed exactly. ':'')+`${run.orders.toLocaleString()} orders · ${run.fills.toLocaleString()} fills · Quantity fill rate = matched / submitted across both sides. ${conserved?'Cash and inventory conserved; no negative balances.':'Accounting check failed.'}`);
+ text('experiment-status',(replayed?tr('Replayed exactly.')+' ':'')+tr('{orders} orders · {fills} fills · Quantity fill rate = matched / submitted across both sides. {accounting}',{orders:run.orders.toLocaleString(numberLocale()),fills:run.fills.toLocaleString(numberLocale()),accounting:tr(conserved?'Cash and inventory conserved; no negative balances.':'Accounting check failed.')}));
 }
 $('scenario').addEventListener('change',()=>renderExperiment());$('rerun').addEventListener('click',()=>renderExperiment(true));renderExperiment();
 const instruments={
@@ -29,7 +32,7 @@ const instruments={
  perps:{stage:'RESEARCH ROADMAP / CONTINUOUS EXPOSURE',question:'How will a creator’s trajectory change?',description:'A proposed long/short contract linked to an auditable attention index. Continuous pricing requires a separate design for funding, margin, liquidation and loss absorption.',rule:'Signed quantity × contract-price change − net funding − fees',investor:'Profit or lose as the traded price moves relative to the position. Funding and trading costs change the result; adverse moves can trigger liquidation.',creator:'A proposed share of eligible execution fees on the creator-linked contract, subject to an opt-in agreement and conflict controls.',platform:'Execution fees are the revenue source. Funding is a transfer between positions; collateral and investor gains are not platform revenue.'}
 };
 const tabButtons=[...document.querySelectorAll('[data-instrument]')];
-function selectInstrument(button){const key=button.dataset.instrument,data=instruments[key];tabButtons.forEach(b=>{b.setAttribute('aria-selected',String(b===button));b.tabIndex=b===button?0:-1;});$('instrument-panel').setAttribute('aria-labelledby',button.id);for(const [field,value]of Object.entries(data))text('instrument-'+field,value);}
+function selectInstrument(button){const key=button.dataset.instrument,data=instruments[key];tabButtons.forEach(b=>{b.setAttribute('aria-selected',String(b===button));b.tabIndex=b===button?0:-1;});$('instrument-panel').setAttribute('aria-labelledby',button.id);for(const [field,value]of Object.entries(data))text('instrument-'+field,tr(value));}
 tabButtons.forEach((button,index)=>{button.addEventListener('click',()=>selectInstrument(button));button.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%3;else if(event.key==='ArrowLeft')next=(index+2)%3;else if(event.key==='Home')next=0;else if(event.key==='End')next=2;else return;event.preventDefault();selectInstrument(tabButtons[next]);tabButtons[next].focus();});});
 function renderPayoff(){const entry=Number($('entry').value)/100,exit=Number($('exit-price').value)/100,mode=$('exit-mode').value;const result=binaryPayoff({quantity:100,entry,exit,outcome:mode==='win'?1:0,mode:mode==='sell'?'exit':'settlement',feeRate:.01});text('entry-value',money(entry,2));text('exit-value',money(exit,2));$('exit-label').hidden=mode!=='sell';text('capital-paid',money(result.entryNotional,2));text('exit-proceeds',money(result.grossProceeds,2));text('position-fees',money(result.totalFees,2));text('net-pnl',(result.netPnl>0?'+':'')+money(result.netPnl,2));$('net-pnl').classList.toggle('negative',result.netPnl<0);}
 ['entry','exit-price','exit-mode'].forEach(id=>$(id).addEventListener('input',renderPayoff));renderPayoff();
@@ -39,3 +42,5 @@ $('print').addEventListener('click',()=>window.print());
 const sectionLinks=[...document.querySelectorAll('nav a')];
 const observer=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(visible)sectionLinks.forEach(a=>{const active=a.hash==='#'+visible.target.id;a.classList.toggle('active',active);active?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current');});},{rootMargin:'-15% 0px -65% 0px'});
 document.querySelectorAll('main>section').forEach(s=>observer.observe(s));
+
+window.addEventListener('languagechange',()=>{renderExperiment();selectInstrument(tabButtons.find(b=>b.getAttribute('aria-selected')==='true'));renderPayoff();renderEconomics();});
