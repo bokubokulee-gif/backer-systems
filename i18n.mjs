@@ -1,4 +1,4 @@
-import catalogs,{diagramVersions} from './translations.mjs?v=1fc67c3862af';
+import catalogs,{diagramVersions} from './translations.mjs?v=68d23abffc76';
 export const languages = Object.freeze({en:{label:'English',tag:'en-US'},zh:{label:'中文',tag:'zh-Hans'},ja:{label:'日本語',tag:'ja-JP'},ko:{label:'한국어',tag:'ko-KR'}});
 const sourceKeys = new Map(Object.entries(catalogs.en).map(([key,value])=>[value,key]));
 const preferenceKey='backer-systems-language';
