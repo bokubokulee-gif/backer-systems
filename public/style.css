@@ -41,3 +41,7 @@ html:not([lang^=en]) h1,html:not([lang^=en]) h2,html:not([lang^=en]) h3{letter-s
 @media(max-width:350px){.masthead{padding-inline:12px;gap:9px}.masthead-left{gap:10px}.masthead nav{gap:10px}.language-button{gap:4px;padding:7px}.masthead .brand img{width:23px;height:23px}.masthead .brand strong{font-size:19px}html:not([lang^=en]) .chapter-heading h1{font-size:33px}}
 @media print{.language-picker{display:none}}
 @media(max-width:600px){html[lang^=ja] .chapter-heading h1{font-size:clamp(27px,8.7vw,34px);text-wrap:balance}}
+/* CJK labels need the vertical roadmap at compact tablet widths. */
+html:not([lang^=en]) .lede{text-wrap:balance}
+html:not([lang^=en]) .lede br,html:not([lang^=en]) .existing-strip>span br{display:initial}
+@media(max-width:800px){html:not([lang^=en]) .lab-roadmap img{max-width:440px;margin-inline:auto}}
