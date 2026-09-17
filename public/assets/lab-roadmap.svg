@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
-  <title id="title">Backer AI Lab: simulator architecture and prelaunch market experiments</title>
-  <desc id="desc">Two connected technical lanes. Source-dated context and synthetic personas feed a memory, retrieve, reflect, plan and act policy loop. A frozen population is evaluated against held-out behavior. The same population enters four paired experiments: baseline, changed fees, changed liquidity and an information shock. Funded order-book replay produces market-quality metrics for a launch gate. A dashed planned validation path returns externally resolved outcomes through calibration to the agent policy. Solid nodes show prototype components; dashed nodes show research next.</desc>
+  <title id="title" data-i18n="s057">Backer AI Lab: simulator architecture and prelaunch market experiments</title>
+  <desc id="desc" data-i18n="s058">Two connected technical lanes. Source-dated context and synthetic personas feed a memory, retrieve, reflect, plan and act policy loop. A frozen population is evaluated against held-out behavior. The same population enters four paired experiments: baseline, changed fees, changed liquidity and an information shock. Funded order-book replay produces market-quality metrics for a launch gate. A dashed planned validation path returns externally resolved outcomes through calibration to the agent policy. Solid nodes show prototype components; dashed nodes show research next.</desc>
   <defs>
     <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 7 3.5 0 7Z" fill="#a7a5a1"/></marker>
     <marker id="amber-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 7 3.5 0 7Z" fill="#e9bd86"/></marker>
@@ -23,100 +23,100 @@
   </defs>
   <rect width="1200" height="480" fill="#08080a"/>
 
-  <text class="lane amber" x="24" y="29">(a) BUILD THE SIMULATOR</text>
+  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) BUILD THE SIMULATOR</text>
   <path d="M855 24h27" stroke="#aba9a5" stroke-width="1.4"/>
-  <text class="muted" x="891" y="29">Prototype</text>
+  <text class="muted" x="891" y="29" data-i18n="s055">Prototype</text>
   <path d="M997 24h27" stroke="#aba9a5" stroke-width="1.4" stroke-dasharray="5 4"/>
-  <text class="muted" x="1033" y="29">Research next</text>
+  <text class="muted" x="1033" y="29" data-i18n="s056">Research next</text>
 
   <rect class="node" x="24" y="53" width="180" height="52"/>
-  <text class="heading" x="38" y="76">Dated context</text>
-  <text class="muted" x="38" y="95">Exposure · choices</text>
+  <text class="heading" x="38" y="76" data-i18n="s059">Dated context</text>
+  <text class="muted" x="38" y="95" data-i18n="s060">Exposure · choices</text>
   <rect class="node" x="24" y="123" width="180" height="57"/>
-  <text class="heading" x="38" y="146">Synthetic personas</text>
-  <text class="muted" x="38" y="167">Consented cohorts: next</text>
+  <text class="heading" x="38" y="146" data-i18n="s061">Synthetic personas</text>
+  <text class="muted" x="38" y="167" data-i18n="s062">Consented cohorts: next</text>
   <path class="branch" d="M204 79h16v72h-16"/>
   <path class="flow" d="M220 116h20"/>
 
   <rect class="policy" x="240" y="53" width="480" height="127"/>
-  <text class="heading amber" x="257" y="78">Behavioral policy πθ</text>
-  <text class="muted" x="474" y="78">State + memory + constraints</text>
+  <text class="heading amber" x="257" y="78" data-i18n="s031">Behavioral policy πθ</text>
+  <text class="muted" x="474" y="78" data-i18n="s063">State + memory + constraints</text>
   <rect class="node" x="256" y="99" width="94" height="39"/>
-  <text x="303" y="124" text-anchor="middle">Memory</text>
+  <text x="303" y="124" text-anchor="middle" data-i18n="s032">Memory</text>
   <rect class="node" x="366" y="99" width="94" height="39"/>
-  <text x="413" y="124" text-anchor="middle">Retrieve</text>
+  <text x="413" y="124" text-anchor="middle" data-i18n="s033">Retrieve</text>
   <rect class="node" x="476" y="99" width="94" height="39"/>
-  <text x="523" y="124" text-anchor="middle">Reflect</text>
+  <text x="523" y="124" text-anchor="middle" data-i18n="s034">Reflect</text>
   <rect class="node" x="586" y="99" width="118" height="39"/>
-  <text x="645" y="124" text-anchor="middle">Plan / act</text>
+  <text x="645" y="124" text-anchor="middle" data-i18n="s035">Plan / act</text>
   <path class="flow" d="M350 119h16"/>
   <path class="flow" d="M460 119h16"/>
   <path class="flow" d="M570 119h16"/>
   <path class="flow" d="M645 138v24H303v-24"/>
   <rect x="385" y="150" width="177" height="22" fill="#171410"/>
-  <text class="muted" x="474" y="166" text-anchor="middle">Experience → memory</text>
+  <text class="muted" x="474" y="166" text-anchor="middle" data-i18n="s064">Experience → memory</text>
 
   <path class="flow" d="M720 117h38"/>
   <rect class="node" x="758" y="68" width="170" height="96"/>
-  <text class="heading" x="843" y="96" text-anchor="middle">Freeze population</text>
-  <text class="muted" x="843" y="121" text-anchor="middle">Same agents · seeds</text>
-  <text class="muted" x="843" y="144" text-anchor="middle">Budgets · priors</text>
+  <text class="heading" x="843" y="96" text-anchor="middle" data-i18n="s036">Freeze population</text>
+  <text class="muted" x="843" y="121" text-anchor="middle" data-i18n="s065">Same agents · seeds</text>
+  <text class="muted" x="843" y="144" text-anchor="middle" data-i18n="s066">Budgets · priors</text>
   <path class="flow next" d="M928 117h41"/>
   <rect class="node next" x="969" y="68" width="207" height="96"/>
-  <text class="heading" x="1072.5" y="96" text-anchor="middle">Held-out checks</text>
-  <text class="muted" x="1072.5" y="121" text-anchor="middle">Behavior · calibration</text>
-  <text class="muted" x="1072.5" y="144" text-anchor="middle">Cohort / time holdouts</text>
+  <text class="heading" x="1072.5" y="96" text-anchor="middle" data-i18n="s038">Held-out checks</text>
+  <text class="muted" x="1072.5" y="121" text-anchor="middle" data-i18n="s039">Behavior · calibration</text>
+  <text class="muted" x="1072.5" y="144" text-anchor="middle" data-i18n="s067">Cohort / time holdouts</text>
 
   <path class="flow next" d="M1072 164v127"/>
-  <text class="muted" x="1085" y="230">Validation</text>
+  <text class="muted" x="1085" y="230" data-i18n="s068">Validation</text>
   <path class="cohort" d="M843 164v47H244v83"/>
   <rect x="418" y="200" width="299" height="22" fill="#08080a"/>
-  <text class="amber" x="567.5" y="216" text-anchor="middle">Same population. Change one condition.</text>
+  <text class="amber" x="567.5" y="216" text-anchor="middle" data-i18n="s069">Same population. Change one condition.</text>
 
-  <text class="lane amber" x="24" y="249">(b) TEST A MARKET</text>
-  <text class="muted" x="272" y="273">Paired experiments</text>
+  <text class="lane amber" x="24" y="249" data-i18n="s040">(b) TEST A MARKET</text>
+  <text class="muted" x="272" y="273" data-i18n="s070">Paired experiments</text>
   <rect class="node" x="24" y="291" width="180" height="100"/>
-  <text class="heading" x="38" y="320">Candidate contract</text>
-  <text class="muted" x="38" y="345">Rules · fees · horizon</text>
-  <text class="muted" x="38" y="369">Objective resolution</text>
+  <text class="heading" x="38" y="320" data-i18n="s041">Candidate contract</text>
+  <text class="muted" x="38" y="345" data-i18n="s071">Rules · fees · horizon</text>
+  <text class="muted" x="38" y="369" data-i18n="s072">Objective resolution</text>
   <path class="branch" d="M204 341h40M244 296v93"/>
   <path class="flow" d="M244 296h27"/>
   <path class="flow" d="M244 327h27"/>
   <path class="flow" d="M244 358h27"/>
   <path class="flow" d="M244 389h27"/>
   <rect class="node" x="271" y="284" width="152" height="25"/>
-  <text x="347" y="302" text-anchor="middle">Baseline</text>
+  <text x="347" y="302" text-anchor="middle" data-i18n="s043">Baseline</text>
   <rect class="node" x="271" y="315" width="152" height="25"/>
-  <text x="347" y="333" text-anchor="middle">Δ Fees</text>
+  <text x="347" y="333" text-anchor="middle" data-i18n="s044">Δ Fees</text>
   <rect class="node" x="271" y="346" width="152" height="25"/>
-  <text x="347" y="364" text-anchor="middle">Δ Liquidity</text>
+  <text x="347" y="364" text-anchor="middle" data-i18n="s045">Δ Liquidity</text>
   <rect class="node" x="271" y="377" width="152" height="25"/>
-  <text x="347" y="395" text-anchor="middle">Information shock</text>
+  <text x="347" y="395" text-anchor="middle" data-i18n="s046">Information shock</text>
   <path class="branch" d="M423 296h24v93h-24M423 327h24M423 358h24"/>
   <path class="flow" d="M447 341h48"/>
 
   <rect x="495" y="291" width="196" height="100" rx="3" fill="#0b1914" stroke="#00dd94" stroke-width="1.2"/>
-  <text class="heading green" x="593" y="320" text-anchor="middle">Order-book replay</text>
-  <text class="muted" x="593" y="345" text-anchor="middle">Funded agents · fills</text>
-  <text class="muted" x="593" y="369" text-anchor="middle">Price–time · cash · inventory</text>
+  <text class="heading green" x="593" y="320" text-anchor="middle" data-i18n="s047">Order-book replay</text>
+  <text class="muted" x="593" y="345" text-anchor="middle" data-i18n="s073">Funded agents · fills</text>
+  <text class="muted" x="593" y="369" text-anchor="middle" data-i18n="s074">Price–time · cash · inventory</text>
   <path class="flow" d="M691 341h43"/>
   <rect class="node" x="734" y="291" width="186" height="100"/>
-  <text class="heading" x="827" y="320" text-anchor="middle">Compare outcomes</text>
-  <text class="muted" x="827" y="345" text-anchor="middle">Depth · spread · churn</text>
-  <text class="muted" x="827" y="369" text-anchor="middle">Slippage · concentration</text>
+  <text class="heading" x="827" y="320" text-anchor="middle" data-i18n="s049">Compare outcomes</text>
+  <text class="muted" x="827" y="345" text-anchor="middle" data-i18n="s075">Depth · spread · churn</text>
+  <text class="muted" x="827" y="369" text-anchor="middle" data-i18n="s076">Slippage · concentration</text>
   <path class="flow next" d="M920 341h45"/>
   <rect class="node next" x="965" y="291" width="211" height="100"/>
-  <text class="heading" x="1070.5" y="320" text-anchor="middle">Launch gate</text>
-  <text class="muted" x="1070.5" y="345" text-anchor="middle">Integrity · stress · validity</text>
-  <text class="muted" x="1070.5" y="369" text-anchor="middle">Pass / revise / reject</text>
+  <text class="heading" x="1070.5" y="320" text-anchor="middle" data-i18n="s051">Launch gate</text>
+  <text class="muted" x="1070.5" y="345" text-anchor="middle" data-i18n="s077">Integrity · stress · validity</text>
+  <text class="muted" x="1070.5" y="369" text-anchor="middle" data-i18n="s078">Pass / revise / reject</text>
 
   <path class="feedback" d="M1071 391v20h-89v15"/>
   <rect class="node next" x="890" y="426" width="184" height="32"/>
-  <text class="green" x="982" y="447" text-anchor="middle">Resolved outcomes</text>
+  <text class="green" x="982" y="447" text-anchor="middle" data-i18n="s079">Resolved outcomes</text>
   <path class="feedback" d="M890 442h-58"/>
   <rect class="node next" x="636" y="426" width="196" height="32"/>
-  <text class="amber" x="734" y="447" text-anchor="middle">Calibration → policy</text>
+  <text class="amber" x="734" y="447" text-anchor="middle" data-i18n="s080">Calibration → policy</text>
   <path class="feedback" d="M636 442H228V194h252v-14"/>
   <rect x="268" y="430" width="326" height="23" fill="#08080a"/>
-  <text class="amber" x="431" y="447" text-anchor="middle">Validation path · planned</text>
+  <text class="amber" x="431" y="447" text-anchor="middle" data-i18n="s081">Validation path · planned</text>
 </svg>
