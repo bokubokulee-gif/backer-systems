@@ -1,4 +1,4 @@
-import {initializeLanguage,translate as tr,numberLocale} from './i18n.mjs?v=0149ca721928';
+import {initializeLanguage,translate as tr,numberLocale} from './i18n.mjs?v=76dfbebe264b';
 initializeLanguage();
 import {simulateMarket,economics,binaryPayoff,SCENARIOS} from './model.mjs';
 const $=id=>document.getElementById(id);
