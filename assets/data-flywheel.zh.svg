@@ -1,6 +1,6 @@
 <svg lang="zh-Hans" xmlns="http://www.w3.org/2000/svg" width="560" height="550" viewBox="0 0 560 550" role="img" aria-labelledby="title desc">
   <title id="title" data-i18n="s001">Backer 数据飞轮</title>
-  <desc id="desc" data-i18n="s002">规划中的顺时针学习闭环：观测上下文、仿真决策、检验市场规则、记录真实行动、判定外部结果，再校准模型进入下一轮。中心是从决策到结果的证据记录。图示描述系统架构，不代表已验证的预测有效性。</desc>
+  <desc id="desc" data-i18n="s002">拟议数据循环，按顺时针依次为：观测信息、仿真决策、测试市场规则、记录真实行为、判定外部结果、校准模型。中心记录决策与结果的关联。此图展示目标架构，预测有效性尚需验证。</desc>
   <defs>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#e9bd86"/></marker>
     <style>
@@ -25,11 +25,11 @@
   <text x="280" y="242" font-size="23" fill="#e9bd86">↓</text>
   <text x="280" y="271" font-size="24" fill="#f5f3ee" data-i18n="s004">结果</text>
   <text x="280" y="302" font-size="17" fill="#aba9a5" data-i18n="s005">证据记录</text>
-  <g aria-label="01 观测上下文" data-i18n-aria-label="s006">
+  <g aria-label="01 观测信息" data-i18n-aria-label="s006">
     <circle cx="280.00" cy="73.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="280.00" y="44.00" style="fill:#e9bd86">01</text>
     <text class="label" x="280.00" y="75.00" style="font-size:22px" data-i18n="s007">观测</text>
-    <text class="label" x="280.00" y="100.00" style="font-size:22px" data-i18n="s008">上下文</text>
+    <text class="label" x="280.00" y="100.00" style="font-size:22px" data-i18n="s008">信息</text>
   </g>
   <g aria-label="02 仿真决策" data-i18n-aria-label="s009">
     <circle cx="428.96" cy="159.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
@@ -37,17 +37,17 @@
     <text class="label" x="428.96" y="161.00" style="font-size:22px" data-i18n="s010">仿真</text>
     <text class="label" x="428.96" y="186.00" style="font-size:22px" data-i18n="s011">决策</text>
   </g>
-  <g aria-label="03 检验市场规则" data-i18n-aria-label="s012">
+  <g aria-label="03 测试市场规则" data-i18n-aria-label="s012">
     <circle cx="428.96" cy="331.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="428.96" y="302.00" style="fill:#e9bd86">03</text>
-    <text class="label" x="428.96" y="333.00" style="font-size:22px" data-i18n="s013">检验市场</text>
+    <text class="label" x="428.96" y="333.00" style="font-size:22px" data-i18n="s013">测试市场</text>
     <text class="label" x="428.96" y="358.00" style="font-size:22px" data-i18n="s014">规则</text>
   </g>
-  <g aria-label="04 记录行动" data-i18n-aria-label="s015">
+  <g aria-label="04 记录行为" data-i18n-aria-label="s015">
     <circle cx="280.00" cy="417.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="280.00" y="388.00" style="fill:#e9bd86">04</text>
     <text class="label" x="280.00" y="419.00" style="font-size:22px" data-i18n="h159">记录</text>
-    <text class="label" x="280.00" y="444.00" style="font-size:22px" data-i18n="s016">行动</text>
+    <text class="label" x="280.00" y="444.00" style="font-size:22px" data-i18n="s016">行为</text>
   </g>
   <g aria-label="05 判定结果" data-i18n-aria-label="s017">
     <circle cx="131.04" cy="331.00" r="64" fill="#0b1a14" stroke="#00dd94" stroke-width="1.4"/>
@@ -61,6 +61,6 @@
     <text class="label" x="131.04" y="161.00" style="font-size:22px" data-i18n="s021">校准</text>
     <text class="label" x="131.04" y="186.00" style="font-size:22px" data-i18n="s022">模型</text>
   </g>
-  <text class="foot" x="280" y="510" data-i18n="s023">规划中的闭环 · 以外部结果指导学习。</text>
-  <text class="foot" x="280" y="533" data-i18n="s024">合成活动本身不构成新证据。</text>
+  <text class="foot" x="280" y="510" data-i18n="s023">拟议流程 · 以外部结果校准模型</text>
+  <text class="foot" x="280" y="533" data-i18n="s024">合成数据不能替代真实观测</text>
 </svg>

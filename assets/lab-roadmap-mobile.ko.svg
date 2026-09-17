@@ -1,6 +1,6 @@
 <svg lang="ko-KR" xmlns="http://www.w3.org/2000/svg" width="420" height="1032" viewBox="0 0 420 1032" role="img" aria-labelledby="title desc">
-  <title id="title" data-i18n="s025">Backer AI Lab 기술 로드맵</title>
-  <desc id="desc" data-i18n="s026">연결된 두 과정을 보여주는 모바일 도식입니다. 첫째, 출처 시각이 기록된 맥락과 합성 페르소나가 기억, 검색, 성찰, 계획, 행동의 에이전트 정책 순환에 입력됩니다. 집단을 고정하고 홀드아웃 행동을 검증합니다. 둘째, 같은 집단이 출시 후보 계약을 기준 조건, 수수료 변경, 유동성 변경, 정보 충격의 네 병렬 시나리오로 시험합니다. 호가장 재실행 뒤 결과 비교와 출시 기준 평가를 진행합니다. 계획된 검증 경로에서는 외부에서 확정된 결과를 보정에 활용해 에이전트 정책에 반영합니다. 실선은 프로토타입, 점선은 다음 연구 단계를 뜻합니다.</desc>
+  <title id="title" data-i18n="s025">Backer AI Lab 모델·실험 구조</title>
+  <desc id="desc" data-i18n="s026">모바일 기술 도식입니다. 개인별 상태·기억·제약으로 에이전트를 구성하고 정보 검색, 판단 갱신, 계획과 행동을 반복합니다. 집단과 시드를 고정해 수수료·유동성·정보 충격을 각각 변경하고 호가장 체결 결과를 비교합니다. 별도 행동 표본과 외부 확정 결과를 통한 검증은 후속 계획입니다. 실선은 구현된 프로토타입, 점선은 다음 연구 단계를 나타냅니다.</desc>
   <defs>
     <marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#a7a5a1"/></marker>
     <marker id="b" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#e9bd86"/></marker>
@@ -21,12 +21,12 @@
     </style>
   </defs>
   <rect width="420" height="1032" fill="#08080a"/>
-  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) 시뮬레이터 구축</text>
+  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) 에이전트 모델 구성</text>
 
   <rect class="node" x="24" y="48" width="372" height="86"/>
-  <text class="heading" x="40" y="74" data-i18n="s028">맥락 + 페르소나</text>
-  <text class="muted" x="40" y="99" data-i18n="s029">출처 시각 기록 · 합성 에이전트</text>
-  <text class="muted" x="40" y="122" data-i18n="s030">동의 기반 코호트: 다음 연구</text>
+  <text class="heading" x="40" y="74" data-i18n="s028">관측 정보 + 개별 상태</text>
+  <text class="muted" x="40" y="99" data-i18n="s029">출처·시각 기록 · 합성 에이전트</text>
+  <text class="muted" x="40" y="122" data-i18n="s030">동의 기반 행동 검증: 후속 연구</text>
   <path class="flow" d="M210 134v20"/>
 
   <rect x="24" y="154" width="372" height="136" rx="4" fill="#171410" stroke="#e9bd86" stroke-width="1.2"/>
@@ -34,9 +34,9 @@
   <rect class="node" x="44" y="194" width="138" height="36"/>
   <text x="113" y="218" text-anchor="middle" data-i18n="s032">기억</text>
   <rect class="node" x="238" y="194" width="138" height="36"/>
-  <text x="307" y="218" text-anchor="middle" data-i18n="s033">검색</text>
+  <text x="307" y="218" text-anchor="middle" data-i18n="s033">기억 검색</text>
   <rect class="node" x="238" y="247" width="138" height="36"/>
-  <text x="307" y="271" text-anchor="middle" data-i18n="s034">성찰</text>
+  <text x="307" y="271" text-anchor="middle" data-i18n="s034">판단 갱신</text>
   <rect class="node" x="44" y="247" width="138" height="36"/>
   <text x="113" y="271" text-anchor="middle" data-i18n="s035">계획 / 행동</text>
   <path class="flow" d="M182 212h56"/>
@@ -46,18 +46,18 @@
   <path class="flow" d="M210 290v12H113v12"/>
 
   <rect class="node" x="24" y="314" width="178" height="76"/>
-  <text class="heading" x="113" y="341" text-anchor="middle" data-i18n="s036">집단 고정</text>
-  <text class="muted" x="113" y="367" text-anchor="middle" data-i18n="s037">동일 에이전트 / 시드</text>
+  <text class="heading" x="113" y="341" text-anchor="middle" data-i18n="s036">집단·시드 고정</text>
+  <text class="muted" x="113" y="367" text-anchor="middle" data-i18n="s037">동일 참여자 / 난수</text>
   <path class="flow next" d="M202 352h16"/>
   <rect class="node next" x="218" y="314" width="178" height="76"/>
   <text class="heading" x="307" y="341" text-anchor="middle" data-i18n="s038">홀드아웃 검증</text>
-  <text class="muted" x="307" y="367" text-anchor="middle" data-i18n="s039">행동 · 보정</text>
+  <text class="muted" x="307" y="367" text-anchor="middle" data-i18n="s039">행동 비교 · 확률 보정</text>
   <path class="flow next" d="M396 352h16v509h-16"/>
   <path class="cohort" d="M113 390v16h237v49"/>
 
-  <text class="lane amber" x="24" y="433" data-i18n="s040">(b) 시장 검증</text>
+  <text class="lane amber" x="24" y="433" data-i18n="s040">(b) 시장 조건 실험</text>
   <rect class="node" x="24" y="455" width="372" height="62"/>
-  <text class="heading" x="40" y="481" data-i18n="s041">출시 후보 계약</text>
+  <text class="heading" x="40" y="481" data-i18n="s041">검토할 계약</text>
   <text class="muted" x="40" y="506" data-i18n="s042">규칙 · 수수료 · 기간 · 판정</text>
 
   <path class="branch" d="M210 517v88"/>
@@ -78,23 +78,23 @@
 
   <rect x="24" y="661" width="372" height="62" rx="3" fill="#0b1914" stroke="#00dd94" stroke-width="1.2"/>
   <text class="heading green" x="40" y="687" data-i18n="s047">호가장 재실행</text>
-  <text class="muted" x="40" y="712" data-i18n="s048">자금 보유 · 가격·시간 · 체결</text>
+  <text class="muted" x="40" y="712" data-i18n="s048">자금 제약 · 우선순위 · 체결</text>
   <path class="flow" d="M210 723v21"/>
   <rect class="node" x="24" y="744" width="372" height="62"/>
-  <text class="heading" x="40" y="770" data-i18n="s049">결과 비교</text>
+  <text class="heading" x="40" y="770" data-i18n="s049">조건별 결과 비교</text>
   <text class="muted" x="40" y="795" data-i18n="s050">호가 깊이 · 스프레드 · 슬리피지 · 집중도</text>
   <path class="flow next" d="M210 806v21"/>
   <rect class="node next" x="24" y="827" width="372" height="68"/>
-  <text class="heading" x="40" y="853" data-i18n="s051">출시 기준</text>
-  <text class="muted" x="40" y="879" data-i18n="s052">무결성 → 스트레스 → 타당성</text>
+  <text class="heading" x="40" y="853" data-i18n="s051">출시 요건 검토</text>
+  <text class="muted" x="40" y="879" data-i18n="s052">회계 무결성 → 스트레스 → 검증</text>
   <path class="feedback" d="M210 895v23"/>
   <rect class="node next" x="24" y="918" width="372" height="62"/>
-  <text class="heading green" x="40" y="944" data-i18n="s053">결과 확정 → 보정 → 정책</text>
-  <text class="muted" x="40" y="969" data-i18n="s054">외부 결과 · 검증 계획</text>
+  <text class="heading green" x="40" y="944" data-i18n="s053">외부 결과 → 오차 보정 → 정책</text>
+  <text class="muted" x="40" y="969" data-i18n="s054">외부 결과 검증은 후속 계획</text>
   <path class="feedback" d="M24 949H8V179h16"/>
 
   <path d="M24 1009h25" stroke="#aba9a5" stroke-width="1.4"/>
   <text class="muted" x="60" y="1014" data-i18n="s055">프로토타입</text>
   <path d="M199 1009h25" stroke="#aba9a5" stroke-width="1.4" stroke-dasharray="5 4"/>
-  <text class="muted" x="235" y="1014" data-i18n="s056">다음 연구</text>
+  <text class="muted" x="235" y="1014" data-i18n="s056">후속 연구</text>
 </svg>

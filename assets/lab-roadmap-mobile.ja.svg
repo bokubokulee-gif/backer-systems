@@ -1,6 +1,6 @@
 <svg lang="ja-JP" xmlns="http://www.w3.org/2000/svg" width="420" height="1032" viewBox="0 0 420 1032" role="img" aria-labelledby="title desc">
-  <title id="title" data-i18n="s025">Backer AI Labの技術ロードマップ</title>
-  <desc id="desc" data-i18n="s026">二つの工程をつなぐモバイル用の図。まず、時点を明示した情報と仮想ペルソナを、記憶・検索・内省・計画・行動の方策ループに入力する。集団を固定し、未使用の行動データで検証する。次に、同じ集団で商品候補を試す。並行する4条件は、基準、手数料変更、流動性変更、情報ショック。注文板を再現実行して結果を比較し、公開可否を判断する。今後の検証経路では、外部で確定した結果を校正に使い、行動方策へ戻す。実線はプロトタイプ、破線は今後の研究対象を示す。</desc>
+  <title id="title" data-i18n="s025">行動モデルと市場実験の設計</title>
+  <desc id="desc" data-i18n="s026">モバイル用の設計図。上段では、時点付き情報と個体特性から、記憶・検索・内省・計画・行動の方策を定義する。初期集団を固定し、未使用の行動データで検証する。下段では、同じ参加者による基準条件、手数料変更、流動性変更、情報ショックを対比較する。資金の裏付けがある注文板を再現実行し、結果を比較して公開可否を判断する。外部の実測結果で校正し、方策に戻す経路は今後の計画。実線は原型、破線は今後の研究・検証対象。</desc>
   <defs>
     <marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#a7a5a1"/></marker>
     <marker id="b" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#e9bd86"/></marker>
@@ -21,12 +21,12 @@
     </style>
   </defs>
   <rect width="420" height="1032" fill="#08080a"/>
-  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) シミュレーターを構築</text>
+  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) 参加者の行動をモデル化</text>
 
   <rect class="node" x="24" y="48" width="372" height="86"/>
-  <text class="heading" x="40" y="74" data-i18n="s028">状況＋ペルソナ</text>
-  <text class="muted" x="40" y="99" data-i18n="s029">時点付き情報 · 仮想エージェント</text>
-  <text class="muted" x="40" y="122" data-i18n="s030">次段階：同意を得た参加者集団</text>
+  <text class="heading" x="40" y="74" data-i18n="s028">観測情報＋個体特性</text>
+  <text class="muted" x="40" y="99" data-i18n="s029">時点付き情報 · 仮想参加者</text>
+  <text class="muted" x="40" y="122" data-i18n="s030">次段階：同意を得た実参加者データ</text>
   <path class="flow" d="M210 134v20"/>
 
   <rect x="24" y="154" width="372" height="136" rx="4" fill="#171410" stroke="#e9bd86" stroke-width="1.2"/>
@@ -46,16 +46,16 @@
   <path class="flow" d="M210 290v12H113v12"/>
 
   <rect class="node" x="24" y="314" width="178" height="76"/>
-  <text class="heading" x="113" y="341" text-anchor="middle" data-i18n="s036">集団を固定</text>
+  <text class="heading" x="113" y="341" text-anchor="middle" data-i18n="s036">初期集団を固定</text>
   <text class="muted" x="113" y="367" text-anchor="middle" data-i18n="s037">同一集団 / シード</text>
   <path class="flow next" d="M202 352h16"/>
   <rect class="node next" x="218" y="314" width="178" height="76"/>
-  <text class="heading" x="307" y="341" text-anchor="middle" data-i18n="s038">未使用データで検証</text>
-  <text class="muted" x="307" y="367" text-anchor="middle" data-i18n="s039">行動 · 校正</text>
+  <text class="heading" x="307" y="341" text-anchor="middle" data-i18n="s038">未使用データで評価</text>
+  <text class="muted" x="307" y="367" text-anchor="middle" data-i18n="s039">行動 · 確率校正</text>
   <path class="flow next" d="M396 352h16v509h-16"/>
   <path class="cohort" d="M113 390v16h237v49"/>
 
-  <text class="lane amber" x="24" y="433" data-i18n="s040">(b) 市場を検証</text>
+  <text class="lane amber" x="24" y="433" data-i18n="s040">(b) 市場条件を比較</text>
   <rect class="node" x="24" y="455" width="372" height="62"/>
   <text class="heading" x="40" y="481" data-i18n="s041">商品候補</text>
   <text class="muted" x="40" y="506" data-i18n="s042">ルール · 手数料 · 期間 · 結果確定</text>
@@ -66,7 +66,7 @@
   <path class="flow" d="M210 605h-15"/>
   <path class="flow" d="M210 605h15"/>
   <rect class="node" x="32" y="540" width="163" height="34"/>
-  <text x="113.5" y="563" text-anchor="middle" data-i18n="s043">基準</text>
+  <text x="113.5" y="563" text-anchor="middle" data-i18n="s043">基準条件</text>
   <rect class="node" x="225" y="540" width="163" height="34"/>
   <text x="306.5" y="563" text-anchor="middle" data-i18n="s044">Δ 手数料</text>
   <rect class="node" x="32" y="588" width="163" height="34"/>
@@ -81,20 +81,20 @@
   <text class="muted" x="40" y="712" data-i18n="s048">資金確保 · 価格・時間優先 · 約定</text>
   <path class="flow" d="M210 723v21"/>
   <rect class="node" x="24" y="744" width="372" height="62"/>
-  <text class="heading" x="40" y="770" data-i18n="s049">結果を比較</text>
+  <text class="heading" x="40" y="770" data-i18n="s049">結果と市場の質</text>
   <text class="muted" x="40" y="795" data-i18n="s050">板の厚み · スプレッド · 滑り · 集中度</text>
   <path class="flow next" d="M210 806v21"/>
   <rect class="node next" x="24" y="827" width="372" height="68"/>
-  <text class="heading" x="40" y="853" data-i18n="s051">公開判断</text>
+  <text class="heading" x="40" y="853" data-i18n="s051">公開可否の判断</text>
   <text class="muted" x="40" y="879" data-i18n="s052">整合性 → ストレス → 妥当性</text>
   <path class="feedback" d="M210 895v23"/>
   <rect class="node next" x="24" y="918" width="372" height="62"/>
-  <text class="heading green" x="40" y="944" data-i18n="s053">結果確定 → 再校正 → 方策</text>
-  <text class="muted" x="40" y="969" data-i18n="s054">外部の実測結果 · 今後の検証</text>
+  <text class="heading green" x="40" y="944" data-i18n="s053">実測結果 → 校正 → 方策更新</text>
+  <text class="muted" x="40" y="969" data-i18n="s054">実測による検証：今後の計画</text>
   <path class="feedback" d="M24 949H8V179h16"/>
 
   <path d="M24 1009h25" stroke="#aba9a5" stroke-width="1.4"/>
-  <text class="muted" x="60" y="1014" data-i18n="s055">プロトタイプ</text>
+  <text class="muted" x="60" y="1014" data-i18n="s055">原型</text>
   <path d="M199 1009h25" stroke="#aba9a5" stroke-width="1.4" stroke-dasharray="5 4"/>
   <text class="muted" x="235" y="1014" data-i18n="s056">今後の研究</text>
 </svg>

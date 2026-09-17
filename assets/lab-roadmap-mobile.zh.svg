@@ -1,6 +1,6 @@
 <svg lang="zh-Hans" xmlns="http://www.w3.org/2000/svg" width="420" height="1032" viewBox="0 0 420 1032" role="img" aria-labelledby="title desc">
   <title id="title" data-i18n="s025">Backer AI Lab 技术路线图</title>
-  <desc id="desc" data-i18n="s026">移动版双流程图。首先，带来源时间的上下文与合成人物画像进入智能体策略循环：记忆、检索、反思、规划与行动。固定群体后进行行为留出验证。随后，同一群体在基准、手续费变更、流动性变更及信息冲击四种平行情景中测试候选合约。订单簿回放用于比较结果，并进入上线评审。规划中的验证路径将外部判定结果经校准反馈至智能体策略。实线表示原型，虚线表示后续研究。</desc>
+  <desc id="desc" data-i18n="s026">移动版技术流程：带时间戳的观测信息与合成画像进入记忆、检索、反思、规划及行动机制。固定智能体群体，进行行为留出验证；再在基准、费率、流动性与信息冲击四种配对情景下测试合约。订单簿回放产生评估指标，用于上线评审。拟将外部结果经校准反馈至策略。实线为现有原型，虚线为后续研究。</desc>
   <defs>
     <marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#a7a5a1"/></marker>
     <marker id="b" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#e9bd86"/></marker>
@@ -21,11 +21,11 @@
     </style>
   </defs>
   <rect width="420" height="1032" fill="#08080a"/>
-  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) 构建仿真系统</text>
+  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) 仿真建模</text>
 
   <rect class="node" x="24" y="48" width="372" height="86"/>
-  <text class="heading" x="40" y="74" data-i18n="s028">上下文 + 人物画像</text>
-  <text class="muted" x="40" y="99" data-i18n="s029">带时间的上下文 · 合成智能体</text>
+  <text class="heading" x="40" y="74" data-i18n="s028">观测信息 + 智能体画像</text>
+  <text class="muted" x="40" y="99" data-i18n="s029">带时间戳的观测 · 合成智能体</text>
   <text class="muted" x="40" y="122" data-i18n="s030">授权群体：后续研究</text>
   <path class="flow" d="M210 134v20"/>
 
@@ -47,7 +47,7 @@
 
   <rect class="node" x="24" y="314" width="178" height="76"/>
   <text class="heading" x="113" y="341" text-anchor="middle" data-i18n="s036">固定智能体群体</text>
-  <text class="muted" x="113" y="367" text-anchor="middle" data-i18n="s037">同群体 / 同种子</text>
+  <text class="muted" x="113" y="367" text-anchor="middle" data-i18n="s037">固定群体与种子</text>
   <path class="flow next" d="M202 352h16"/>
   <rect class="node next" x="218" y="314" width="178" height="76"/>
   <text class="heading" x="307" y="341" text-anchor="middle" data-i18n="s038">留出验证</text>
@@ -55,10 +55,10 @@
   <path class="flow next" d="M396 352h16v509h-16"/>
   <path class="cohort" d="M113 390v16h237v49"/>
 
-  <text class="lane amber" x="24" y="433" data-i18n="s040">(b) 测试市场机制</text>
+  <text class="lane amber" x="24" y="433" data-i18n="s040">(b) 市场实验</text>
   <rect class="node" x="24" y="455" width="372" height="62"/>
-  <text class="heading" x="40" y="481" data-i18n="s041">候选合约</text>
-  <text class="muted" x="40" y="506" data-i18n="s042">规则 · 费率 · 期限 · 结果判定</text>
+  <text class="heading" x="40" y="481" data-i18n="s041">待测合约</text>
+  <text class="muted" x="40" y="506" data-i18n="s042">规则 · 费率 · 期限 · 判定标准</text>
 
   <path class="branch" d="M210 517v88"/>
   <path class="flow" d="M210 557h-15"/>
@@ -78,7 +78,7 @@
 
   <rect x="24" y="661" width="372" height="62" rx="3" fill="#0b1914" stroke="#00dd94" stroke-width="1.2"/>
   <text class="heading green" x="40" y="687" data-i18n="s047">订单簿回放</text>
-  <text class="muted" x="40" y="712" data-i18n="s048">资金约束 · 价时优先 · 成交</text>
+  <text class="muted" x="40" y="712" data-i18n="s048">资金约束 · 价格—时间优先 · 成交</text>
   <path class="flow" d="M210 723v21"/>
   <rect class="node" x="24" y="744" width="372" height="62"/>
   <text class="heading" x="40" y="770" data-i18n="s049">比较结果</text>
@@ -90,11 +90,11 @@
   <path class="feedback" d="M210 895v23"/>
   <rect class="node next" x="24" y="918" width="372" height="62"/>
   <text class="heading green" x="40" y="944" data-i18n="s053">结果判定 → 校准 → 策略</text>
-  <text class="muted" x="40" y="969" data-i18n="s054">外部结果 · 规划中的验证</text>
+  <text class="muted" x="40" y="969" data-i18n="s054">外部结果 · 后续验证</text>
   <path class="feedback" d="M24 949H8V179h16"/>
 
   <path d="M24 1009h25" stroke="#aba9a5" stroke-width="1.4"/>
-  <text class="muted" x="60" y="1014" data-i18n="s055">原型</text>
+  <text class="muted" x="60" y="1014" data-i18n="s055">现有原型</text>
   <path d="M199 1009h25" stroke="#aba9a5" stroke-width="1.4" stroke-dasharray="5 4"/>
   <text class="muted" x="235" y="1014" data-i18n="s056">后续研究</text>
 </svg>

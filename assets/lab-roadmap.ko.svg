@@ -1,6 +1,6 @@
 <svg lang="ko-KR" xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
-  <title id="title" data-i18n="s057">Backer AI Lab: 시뮬레이터 구조와 출시 전 시장 실험</title>
-  <desc id="desc" data-i18n="s058">연결된 두 기술 흐름입니다. 출처 시각이 기록된 맥락과 합성 페르소나가 기억, 검색, 성찰, 계획, 행동의 정책 순환에 입력됩니다. 고정된 집단을 홀드아웃 행동 데이터와 비교합니다. 같은 집단이 기준 조건, 수수료 변경, 유동성 변경, 정보 충격의 네 쌍대 실험에 참여합니다. 자금이 확보된 호가장 재실행으로 시장 품질 지표를 얻어 출시 기준을 평가합니다. 점선으로 표시한 검증 계획은 외부에서 확정된 결과를 보정에 활용해 에이전트 정책에 반영합니다. 실선 노드는 프로토타입 구성 요소, 점선 노드는 다음 연구 단계를 뜻합니다.</desc>
+  <title id="title" data-i18n="s057">Backer AI Lab: 참여자 모델과 출시 전 시장 실험</title>
+  <desc id="desc" data-i18n="s058">상단은 참여자 모델 구성, 하단은 시장 조건 비교입니다. 에이전트별 상태·기억·자원 제약을 반영해 정보를 검색하고 판단과 행동을 갱신합니다. 같은 집단·시드에서 기준 조건과 수수료·유동성·정보 충격 변경 조건을 비교합니다. 호가장 재실행으로 체결·가격·집중도 지표를 얻어 출시 요건을 검토합니다. 점선 경로는 외부 확정 결과를 이용한 모델 검증·보정 계획입니다. 실선은 프로토타입, 점선은 후속 연구를 뜻합니다.</desc>
   <defs>
     <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 7 3.5 0 7Z" fill="#a7a5a1"/></marker>
     <marker id="amber-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 7 3.5 0 7Z" fill="#e9bd86"/></marker>
@@ -23,18 +23,18 @@
   </defs>
   <rect width="1200" height="480" fill="#08080a"/>
 
-  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) 시뮬레이터 구축</text>
+  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) 에이전트 모델 구성</text>
   <path d="M855 24h27" stroke="#aba9a5" stroke-width="1.4"/>
   <text class="muted" x="891" y="29" data-i18n="s055">프로토타입</text>
   <path d="M997 24h27" stroke="#aba9a5" stroke-width="1.4" stroke-dasharray="5 4"/>
-  <text class="muted" x="1033" y="29" data-i18n="s056">다음 연구</text>
+  <text class="muted" x="1033" y="29" data-i18n="s056">후속 연구</text>
 
   <rect class="node" x="24" y="53" width="180" height="52"/>
-  <text class="heading" x="38" y="76" data-i18n="s059">시각이 기록된 맥락</text>
+  <text class="heading" x="38" y="76" data-i18n="s059">시점별 관측 정보</text>
   <text class="muted" x="38" y="95" data-i18n="s060">노출 · 선택</text>
   <rect class="node" x="24" y="123" width="180" height="57"/>
-  <text class="heading" x="38" y="146" data-i18n="s061">합성 페르소나</text>
-  <text class="muted" x="38" y="167" data-i18n="s062">동의 코호트: 다음 단계</text>
+  <text class="heading" x="38" y="146" data-i18n="s061">합성 참여자 상태</text>
+  <text class="muted" x="38" y="167" data-i18n="s062">동의 기반 검증: 후속</text>
   <path class="branch" d="M204 79h16v72h-16"/>
   <path class="flow" d="M220 116h20"/>
 
@@ -44,9 +44,9 @@
   <rect class="node" x="256" y="99" width="94" height="39"/>
   <text x="303" y="124" text-anchor="middle" data-i18n="s032">기억</text>
   <rect class="node" x="366" y="99" width="94" height="39"/>
-  <text x="413" y="124" text-anchor="middle" data-i18n="s033">검색</text>
+  <text x="413" y="124" text-anchor="middle" data-i18n="s033">기억 검색</text>
   <rect class="node" x="476" y="99" width="94" height="39"/>
-  <text x="523" y="124" text-anchor="middle" data-i18n="s034">성찰</text>
+  <text x="523" y="124" text-anchor="middle" data-i18n="s034">판단 갱신</text>
   <rect class="node" x="586" y="99" width="118" height="39"/>
   <text x="645" y="124" text-anchor="middle" data-i18n="s035">계획 / 행동</text>
   <path class="flow" d="M350 119h16"/>
@@ -58,27 +58,27 @@
 
   <path class="flow" d="M720 117h38"/>
   <rect class="node" x="758" y="68" width="170" height="96"/>
-  <text class="heading" x="843" y="96" text-anchor="middle" data-i18n="s036">집단 고정</text>
-  <text class="muted" x="843" y="121" text-anchor="middle" data-i18n="s065">동일 에이전트 · 시드</text>
+  <text class="heading" x="843" y="96" text-anchor="middle" data-i18n="s036">집단·시드 고정</text>
+  <text class="muted" x="843" y="121" text-anchor="middle" data-i18n="s065">동일 참여자 · 난수</text>
   <text class="muted" x="843" y="144" text-anchor="middle" data-i18n="s066">예산 · 사전 확률</text>
   <path class="flow next" d="M928 117h41"/>
   <rect class="node next" x="969" y="68" width="207" height="96"/>
   <text class="heading" x="1072.5" y="96" text-anchor="middle" data-i18n="s038">홀드아웃 검증</text>
-  <text class="muted" x="1072.5" y="121" text-anchor="middle" data-i18n="s039">행동 · 보정</text>
+  <text class="muted" x="1072.5" y="121" text-anchor="middle" data-i18n="s039">행동 비교 · 확률 보정</text>
   <text class="muted" x="1072.5" y="144" text-anchor="middle" data-i18n="s067">코호트 / 시점 홀드아웃</text>
 
   <path class="flow next" d="M1072 164v127"/>
   <text class="muted" x="1085" y="230" data-i18n="s068">타당성 검증</text>
   <path class="cohort" d="M843 164v47H244v83"/>
   <rect x="418" y="200" width="299" height="22" fill="#08080a"/>
-  <text class="amber" x="567.5" y="216" text-anchor="middle" data-i18n="s069">같은 집단에서 조건 하나만 변경합니다.</text>
+  <text class="amber" x="567.5" y="216" text-anchor="middle" data-i18n="s069">집단·시드는 고정, 조건 하나만 변경</text>
 
-  <text class="lane amber" x="24" y="249" data-i18n="s040">(b) 시장 검증</text>
-  <text class="muted" x="272" y="273" data-i18n="s070">쌍대 실험</text>
+  <text class="lane amber" x="24" y="249" data-i18n="s040">(b) 시장 조건 실험</text>
+  <text class="muted" x="272" y="273" data-i18n="s070">조건별 비교 실험</text>
   <rect class="node" x="24" y="291" width="180" height="100"/>
-  <text class="heading" x="38" y="320" data-i18n="s041">출시 후보 계약</text>
+  <text class="heading" x="38" y="320" data-i18n="s041">검토할 계약</text>
   <text class="muted" x="38" y="345" data-i18n="s071">규칙 · 수수료 · 기간</text>
-  <text class="muted" x="38" y="369" data-i18n="s072">객관적 결과 판정</text>
+  <text class="muted" x="38" y="369" data-i18n="s072">외부 지표로 판정</text>
   <path class="branch" d="M204 341h40M244 296v93"/>
   <path class="flow" d="M244 296h27"/>
   <path class="flow" d="M244 327h27"/>
@@ -97,18 +97,18 @@
 
   <rect x="495" y="291" width="196" height="100" rx="3" fill="#0b1914" stroke="#00dd94" stroke-width="1.2"/>
   <text class="heading green" x="593" y="320" text-anchor="middle" data-i18n="s047">호가장 재실행</text>
-  <text class="muted" x="593" y="345" text-anchor="middle" data-i18n="s073">자금 보유 에이전트 · 체결</text>
-  <text class="muted" x="593" y="369" text-anchor="middle" data-i18n="s074">가격·시간 · 현금 · 보유 수량</text>
+  <text class="muted" x="593" y="345" text-anchor="middle" data-i18n="s073">자금 제약 · 주문 체결</text>
+  <text class="muted" x="593" y="369" text-anchor="middle" data-i18n="s074">가격·시간 · 현금 · 보유량</text>
   <path class="flow" d="M691 341h43"/>
   <rect class="node" x="734" y="291" width="186" height="100"/>
-  <text class="heading" x="827" y="320" text-anchor="middle" data-i18n="s049">결과 비교</text>
+  <text class="heading" x="827" y="320" text-anchor="middle" data-i18n="s049">조건별 결과 비교</text>
   <text class="muted" x="827" y="345" text-anchor="middle" data-i18n="s075">호가 깊이 · 스프레드 · 이탈</text>
   <text class="muted" x="827" y="369" text-anchor="middle" data-i18n="s076">슬리피지 · 집중도</text>
   <path class="flow next" d="M920 341h45"/>
   <rect class="node next" x="965" y="291" width="211" height="100"/>
-  <text class="heading" x="1070.5" y="320" text-anchor="middle" data-i18n="s051">출시 기준</text>
-  <text class="muted" x="1070.5" y="345" text-anchor="middle" data-i18n="s077">무결성 · 스트레스 · 타당성</text>
-  <text class="muted" x="1070.5" y="369" text-anchor="middle" data-i18n="s078">통과 / 수정 / 기각</text>
+  <text class="heading" x="1070.5" y="320" text-anchor="middle" data-i18n="s051">출시 요건 검토</text>
+  <text class="muted" x="1070.5" y="345" text-anchor="middle" data-i18n="s077">회계 무결성 · 스트레스 · 검증</text>
+  <text class="muted" x="1070.5" y="369" text-anchor="middle" data-i18n="s078">채택 / 수정 / 제외</text>
 
   <path class="feedback" d="M1071 391v20h-89v15"/>
   <rect class="node next" x="890" y="426" width="184" height="32"/>
@@ -118,5 +118,5 @@
   <text class="amber" x="734" y="447" text-anchor="middle" data-i18n="s080">보정 → 정책</text>
   <path class="feedback" d="M636 442H228V194h252v-14"/>
   <rect x="268" y="430" width="326" height="23" fill="#08080a"/>
-  <text class="amber" x="431" y="447" text-anchor="middle" data-i18n="s081">검증 경로 · 계획</text>
+  <text class="amber" x="431" y="447" text-anchor="middle" data-i18n="s081">외부 검증 경로 · 계획</text>
 </svg>

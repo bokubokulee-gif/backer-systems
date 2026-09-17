@@ -1,6 +1,6 @@
 <svg lang="ja-JP" xmlns="http://www.w3.org/2000/svg" width="560" height="550" viewBox="0 0 560 550" role="img" aria-labelledby="title desc">
-  <title id="title" data-i18n="s001">Backerのデータ循環</title>
-  <desc id="desc" data-i18n="s002">時計回りに進む学習循環の構想図。状況を観測し、判断を模擬し、市場ルールを試し、実際の行動を記録し、外部データで結果を確定し、次のサイクルに向けてモデルを校正する。中央は判断と結果を結ぶ根拠の記録。システムの設計図であり、予測の妥当性を実証済みとするものではない。</desc>
+  <title id="title" data-i18n="s001">Backerの予測検証の循環</title>
+  <desc id="desc" data-i18n="s002">予測検証の構想図。対象の状況を観測し、参加者の判断を模擬し、市場条件を比較する。公開後の行動と外部で確定した結果を記録し、モデルを校正して次の実験へ戻す。中央は判断と結果の対応記録。予測力の実証済み成果ではなく、検証手順の設計を示す。</desc>
   <defs>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#e9bd86"/></marker>
     <style>
@@ -24,7 +24,7 @@
   <text x="280" y="213" font-size="24" fill="#f5f3ee" data-i18n="s003">判断</text>
   <text x="280" y="242" font-size="23" fill="#e9bd86">↓</text>
   <text x="280" y="271" font-size="24" fill="#f5f3ee" data-i18n="s004">結果</text>
-  <text x="280" y="302" font-size="17" fill="#aba9a5" data-i18n="s005">根拠の記録</text>
+  <text x="280" y="302" font-size="17" fill="#aba9a5" data-i18n="s005">予測・行動記録</text>
   <g aria-label="01 状況を観測" data-i18n-aria-label="s006">
     <circle cx="280.00" cy="73.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="280.00" y="44.00" style="fill:#e9bd86">01</text>
@@ -61,6 +61,6 @@
     <text class="label" x="131.04" y="161.00" style="font-size:22px" data-i18n="s021">モデルを</text>
     <text class="label" x="131.04" y="186.00" style="font-size:22px" data-i18n="s022">校正</text>
   </g>
-  <text class="foot" x="280" y="510" data-i18n="s023">構想段階 · 外部の実測結果に基づいて学習</text>
-  <text class="foot" x="280" y="533" data-i18n="s024">仮想的な活動だけでは、新たな実証にならない。</text>
+  <text class="foot" x="280" y="510" data-i18n="s023">検証対象は、外部で確定した結果。</text>
+  <text class="foot" x="280" y="533" data-i18n="s024">模擬データだけでは予測力を実証できない。</text>
 </svg>

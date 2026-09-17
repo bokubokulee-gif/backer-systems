@@ -1,6 +1,6 @@
 <svg lang="ko-KR" xmlns="http://www.w3.org/2000/svg" width="560" height="550" viewBox="0 0 560 550" role="img" aria-labelledby="title desc">
-  <title id="title" data-i18n="s001">Backer 데이터 선순환</title>
-  <desc id="desc" data-i18n="s002">제안된 시계 방향 학습 순환입니다. 맥락을 관측하고, 의사결정을 시뮬레이션하며, 시장 규칙을 검증한 뒤 실제 행동을 기록합니다. 외부 결과를 확정하고 모델을 보정해 다음 주기로 이어집니다. 중심에는 의사결정과 결과를 연결한 근거 기록이 있습니다. 시스템 설계이며, 예측 타당성이 이미 입증되었다는 주장이 아닙니다.</desc>
+  <title id="title" data-i18n="s001">Backer 데이터 학습 경로</title>
+  <desc id="desc" data-i18n="s002">시계 방향으로 연결한 데이터 학습 설계입니다. 맥락과 입력을 관측하고 참여자 행동을 모의 실험한 뒤 시장 규칙을 검증합니다. 실제 주문·행동을 외부 확정 결과에 연결하고 예측 오차로 모델을 보정합니다. 중앙 기록은 의사결정과 결과를 연결합니다. 실제 예측 성능은 아직 검증 대상입니다.</desc>
   <defs>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#e9bd86"/></marker>
     <style>
@@ -61,6 +61,6 @@
     <text class="label" x="131.04" y="161.00" style="font-size:22px" data-i18n="s021">모델</text>
     <text class="label" x="131.04" y="186.00" style="font-size:22px" data-i18n="s022">보정</text>
   </g>
-  <text class="foot" x="280" y="510" data-i18n="s023">제안된 순환 · 외부 결과를 기준으로 학습합니다.</text>
-  <text class="foot" x="280" y="533" data-i18n="s024">합성 활동만으로는 새로운 근거가 생기지 않습니다.</text>
+  <text class="foot" x="280" y="510" data-i18n="s023">설계안 · 외부 확정 결과로 모델을 평가합니다.</text>
+  <text class="foot" x="280" y="533" data-i18n="s024">모의 활동 자체는 추가 관측 근거가 아닙니다.</text>
 </svg>

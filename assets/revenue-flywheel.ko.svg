@@ -1,6 +1,6 @@
 <svg lang="ko-KR" xmlns="http://www.w3.org/2000/svg" width="560" height="550" viewBox="0 0 560 550" role="img" aria-labelledby="title desc">
-  <title id="title" data-i18n="s082">Backer 매출 선순환</title>
-  <desc id="desc" data-i18n="s083">제안된 시계 방향 수익 순환입니다. 크리에이터 참여, 오디언스의 발견, 거래 체결, 거래 수수료 징수, 크리에이터 배분과 플랫폼 재투자로 이어집니다. 이후 시장 품질 개선이 다음 참여를 유도할 수 있습니다. 수수료는 크리에이터와 플랫폼이 나누는 하나의 재원이며, 독립된 두 매출원이 아닙니다. 투자자 담보는 플랫폼 매출이 아닙니다. 성장은 조건부입니다.</desc>
+  <title id="title" data-i18n="s082">Backer 수익 재투자 경로</title>
+  <desc id="desc" data-i18n="s083">시계 방향으로 연결한 목표 수익 구조입니다. 크리에이터 참여와 이용자 유입이 정상 거래로 이어지면 수수료가 발생합니다. 크리에이터·유동성 제공자·플랫폼이 이를 나누며, 플랫폼 잔여분을 운영과 연구에 재투자합니다. 품질 개선이 반복 수요로 이어지는지는 검증해야 합니다. 수수료 재원은 하나이며 투자자 담보는 매출에 포함하지 않습니다.</desc>
   <defs>
     <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 6 3 0 6Z" fill="#e9bd86"/></marker>
     <style>
@@ -24,18 +24,18 @@
   <text x="280" y="213" font-size="22" fill="#f5f3ee" data-i18n="s084">단일 수수료 풀</text>
   <text x="280" y="247" font-size="18" fill="#e9bd86" data-i18n="s085">크리에이터 + 유동성</text>
   <text x="280" y="273" font-size="18" fill="#e9bd86" data-i18n="s086">+ 플랫폼 몫</text>
-  <text x="280" y="304" font-size="17" fill="#aba9a5" data-i18n="s087">한 번만 배분</text>
+  <text x="280" y="304" font-size="17" fill="#aba9a5" data-i18n="s087">징수액 내 배분</text>
   <g aria-label="01 크리에이터 참여" data-i18n-aria-label="s088">
     <circle cx="280.00" cy="73.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="280.00" y="44.00" style="fill:#e9bd86">01</text>
     <text class="label" x="280.00" y="75.00" style="font-size:22px" data-i18n="s089">크리에이터</text>
     <text class="label" x="280.00" y="100.00" style="font-size:20px" data-i18n="s090">참여</text>
   </g>
-  <g aria-label="02 오디언스의 발견" data-i18n-aria-label="s091">
+  <g aria-label="02 이용자 유입" data-i18n-aria-label="s091">
     <circle cx="428.96" cy="159.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="428.96" y="130.00" style="fill:#e9bd86">02</text>
-    <text class="label" x="428.96" y="161.00" style="font-size:22px" data-i18n="s092">오디언스의</text>
-    <text class="label" x="428.96" y="186.00" style="font-size:22px" data-i18n="s093">발견</text>
+    <text class="label" x="428.96" y="161.00" style="font-size:22px" data-i18n="s092">이용자</text>
+    <text class="label" x="428.96" y="186.00" style="font-size:22px" data-i18n="s093">유입</text>
   </g>
   <g aria-label="03 거래 체결" data-i18n-aria-label="s094">
     <circle cx="428.96" cy="331.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
@@ -49,7 +49,7 @@
     <text class="label" x="280.00" y="419.00" style="font-size:22px" data-i18n="s098">수수료</text>
     <text class="label" x="280.00" y="444.00" style="font-size:22px" data-i18n="s099">징수</text>
   </g>
-  <g aria-label="05 크리에이터 배분 + 재투자" data-i18n-aria-label="s100">
+  <g aria-label="05 분배와 재투자" data-i18n-aria-label="s100">
     <circle cx="131.04" cy="331.00" r="64" fill="#15120e" stroke="#e9bd86" stroke-width="1.4"/>
     <text class="number" x="131.04" y="302.00" style="fill:#e9bd86">05</text>
     <text class="label" x="131.04" y="333.00" style="font-size:22px" data-i18n="s101">배분금 +</text>
@@ -61,6 +61,6 @@
     <text class="label" x="131.04" y="161.00" style="font-size:22px" data-i18n="s104">시장</text>
     <text class="label" x="131.04" y="186.00" style="font-size:22px" data-i18n="s105">품질</text>
   </g>
-  <text class="foot" x="280" y="510" data-i18n="s106">제안된 순환 · 성장은 시장 품질에 달려 있습니다.</text>
-  <text class="foot" x="280" y="533" data-i18n="s107">수수료 재원은 하나. 담보는 매출이 아닙니다.</text>
+  <text class="foot" x="280" y="510" data-i18n="s106">목표 구조 · 성장은 품질과 반복 수요에 달려 있습니다.</text>
+  <text class="foot" x="280" y="533" data-i18n="s107">수수료만 배분하며 담보는 매출에서 제외합니다.</text>
 </svg>

@@ -1,6 +1,6 @@
 <svg lang="zh-Hans" xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
-  <title id="title" data-i18n="s057">Backer AI Lab：仿真架构与上线前市场实验</title>
-  <desc id="desc" data-i18n="s058">两条相连的技术流程：带来源时间的上下文与合成人物画像驱动记忆、检索、反思、规划及行动循环；固定群体后，以留出行为数据评估。同一群体分别进行基准、手续费变更、流动性变更及信息冲击四种配对实验。资金约束下的订单簿回放产出市场质量指标，用于上线评审。虚线所示的规划验证路径，将外部判定结果经校准反馈至智能体策略。实线节点表示原型组件，虚线节点表示后续研究。</desc>
+  <title id="title" data-i18n="s057">Backer AI Lab：仿真建模与上线前实验</title>
+  <desc id="desc" data-i18n="s058">两条技术流程相连：带时间戳的观测信息与合成画像驱动记忆、检索、反思、规划及行动。固定群体后，以留出行为数据评估。同一群体在基准、费率、流动性与信息冲击四种配对情景下测试合约。资金约束下的订单簿回放产生市场质量指标，用于上线评审。拟将外部结果经校准反馈至策略。实线为现有原型，虚线为后续研究。</desc>
   <defs>
     <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 7 3.5 0 7Z" fill="#a7a5a1"/></marker>
     <marker id="amber-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 7 3.5 0 7Z" fill="#e9bd86"/></marker>
@@ -23,18 +23,18 @@
   </defs>
   <rect width="1200" height="480" fill="#08080a"/>
 
-  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) 构建仿真系统</text>
+  <text class="lane amber" x="24" y="29" data-i18n="s027">(a) 仿真建模</text>
   <path d="M855 24h27" stroke="#aba9a5" stroke-width="1.4"/>
-  <text class="muted" x="891" y="29" data-i18n="s055">原型</text>
+  <text class="muted" x="891" y="29" data-i18n="s055">现有原型</text>
   <path d="M997 24h27" stroke="#aba9a5" stroke-width="1.4" stroke-dasharray="5 4"/>
   <text class="muted" x="1033" y="29" data-i18n="s056">后续研究</text>
 
   <rect class="node" x="24" y="53" width="180" height="52"/>
-  <text class="heading" x="38" y="76" data-i18n="s059">带时间的上下文</text>
+  <text class="heading" x="38" y="76" data-i18n="s059">时点信息</text>
   <text class="muted" x="38" y="95" data-i18n="s060">曝光 · 选择</text>
   <rect class="node" x="24" y="123" width="180" height="57"/>
-  <text class="heading" x="38" y="146" data-i18n="s061">合成人物画像</text>
-  <text class="muted" x="38" y="167" data-i18n="s062">授权群体：下一步</text>
+  <text class="heading" x="38" y="146" data-i18n="s061">合成智能体画像</text>
+  <text class="muted" x="38" y="167" data-i18n="s062">授权群体：下一阶段</text>
   <path class="branch" d="M204 79h16v72h-16"/>
   <path class="flow" d="M220 116h20"/>
 
@@ -59,26 +59,26 @@
   <path class="flow" d="M720 117h38"/>
   <rect class="node" x="758" y="68" width="170" height="96"/>
   <text class="heading" x="843" y="96" text-anchor="middle" data-i18n="s036">固定智能体群体</text>
-  <text class="muted" x="843" y="121" text-anchor="middle" data-i18n="s065">同群体 · 同种子</text>
+  <text class="muted" x="843" y="121" text-anchor="middle" data-i18n="s065">固定群体与种子</text>
   <text class="muted" x="843" y="144" text-anchor="middle" data-i18n="s066">预算 · 先验</text>
   <path class="flow next" d="M928 117h41"/>
   <rect class="node next" x="969" y="68" width="207" height="96"/>
   <text class="heading" x="1072.5" y="96" text-anchor="middle" data-i18n="s038">留出验证</text>
   <text class="muted" x="1072.5" y="121" text-anchor="middle" data-i18n="s039">行为 · 校准</text>
-  <text class="muted" x="1072.5" y="144" text-anchor="middle" data-i18n="s067">按群体 / 时间留出</text>
+  <text class="muted" x="1072.5" y="144" text-anchor="middle" data-i18n="s067">群体留出 / 时间留出</text>
 
   <path class="flow next" d="M1072 164v127"/>
   <text class="muted" x="1085" y="230" data-i18n="s068">验证</text>
   <path class="cohort" d="M843 164v47H244v83"/>
   <rect x="418" y="200" width="299" height="22" fill="#08080a"/>
-  <text class="amber" x="567.5" y="216" text-anchor="middle" data-i18n="s069">固定群体，只改一项条件。</text>
+  <text class="amber" x="567.5" y="216" text-anchor="middle" data-i18n="s069">固定群体，仅改一个变量。</text>
 
-  <text class="lane amber" x="24" y="249" data-i18n="s040">(b) 测试市场机制</text>
+  <text class="lane amber" x="24" y="249" data-i18n="s040">(b) 市场实验</text>
   <text class="muted" x="272" y="273" data-i18n="s070">配对实验</text>
   <rect class="node" x="24" y="291" width="180" height="100"/>
-  <text class="heading" x="38" y="320" data-i18n="s041">候选合约</text>
+  <text class="heading" x="38" y="320" data-i18n="s041">待测合约</text>
   <text class="muted" x="38" y="345" data-i18n="s071">规则 · 费率 · 期限</text>
-  <text class="muted" x="38" y="369" data-i18n="s072">客观结果判定</text>
+  <text class="muted" x="38" y="369" data-i18n="s072">客观判定</text>
   <path class="branch" d="M204 341h40M244 296v93"/>
   <path class="flow" d="M244 296h27"/>
   <path class="flow" d="M244 327h27"/>
@@ -98,7 +98,7 @@
   <rect x="495" y="291" width="196" height="100" rx="3" fill="#0b1914" stroke="#00dd94" stroke-width="1.2"/>
   <text class="heading green" x="593" y="320" text-anchor="middle" data-i18n="s047">订单簿回放</text>
   <text class="muted" x="593" y="345" text-anchor="middle" data-i18n="s073">资金约束 · 成交</text>
-  <text class="muted" x="593" y="369" text-anchor="middle" data-i18n="s074">价时优先 · 现金 · 持仓</text>
+  <text class="muted" x="593" y="369" text-anchor="middle" data-i18n="s074">价格—时间优先 · 现金 · 持仓</text>
   <path class="flow" d="M691 341h43"/>
   <rect class="node" x="734" y="291" width="186" height="100"/>
   <text class="heading" x="827" y="320" text-anchor="middle" data-i18n="s049">比较结果</text>
@@ -112,11 +112,11 @@
 
   <path class="feedback" d="M1071 391v20h-89v15"/>
   <rect class="node next" x="890" y="426" width="184" height="32"/>
-  <text class="green" x="982" y="447" text-anchor="middle" data-i18n="s079">已判定结果</text>
+  <text class="green" x="982" y="447" text-anchor="middle" data-i18n="s079">最终结果</text>
   <path class="feedback" d="M890 442h-58"/>
   <rect class="node next" x="636" y="426" width="196" height="32"/>
   <text class="amber" x="734" y="447" text-anchor="middle" data-i18n="s080">校准 → 策略</text>
   <path class="feedback" d="M636 442H228V194h252v-14"/>
   <rect x="268" y="430" width="326" height="23" fill="#08080a"/>
-  <text class="amber" x="431" y="447" text-anchor="middle" data-i18n="s081">验证路径 · 规划中</text>
+  <text class="amber" x="431" y="447" text-anchor="middle" data-i18n="s081">拟建验证流程</text>
 </svg>

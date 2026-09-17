@@ -1,4 +1,4 @@
-import catalogs,{diagramVersions} from './translations.mjs?v=4f2ebfdf3421';
+import catalogs,{diagramVersions} from './translations.mjs?v=1fc67c3862af';
 export const languages = Object.freeze({en:{label:'English',tag:'en-US'},zh:{label:'中文',tag:'zh-Hans'},ja:{label:'日本語',tag:'ja-JP'},ko:{label:'한국어',tag:'ko-KR'}});
 const sourceKeys = new Map(Object.entries(catalogs.en).map(([key,value])=>[value,key]));
 const preferenceKey='backer-systems-language';
@@ -14,8 +14,18 @@ export function translate(source,variables={}) {
 }
 const attributes=['aria-label','title','alt','content'];
 const diagrams=[];
+const scienceBlocks=[];
+function arrangeScience(){
+ // CJK editions introduce the model and prototype before explaining signal inputs.
+ const inputHeading=document.querySelector('.signal-heading');
+ for(const {element,originalPosition} of scienceBlocks){
+  if(current==='en')originalPosition.after(element);
+  else inputHeading.before(element);
+ }
+}
 function renderStatic(){
  document.documentElement.lang=languages[current].tag;
+ document.querySelector('.lab-roadmap source').media=`(max-width: ${current==='en'?600:800}px)`;
  document.querySelectorAll('[data-i18n]').forEach(element=>{element.innerHTML=catalogs[current][element.dataset.i18n];});
  for(const attribute of attributes)document.querySelectorAll(`[data-i18n-${attribute}]`).forEach(element=>element.setAttribute(attribute,catalogs[current][element.getAttribute(`data-i18n-${attribute}`)]));
  for(const {element,attribute,source} of diagrams){const file=current==='en'?source:source.replace(/\.svg$/,`.${current}.svg`);element.setAttribute(attribute,file+'?v='+diagramVersions[file]);}
@@ -23,8 +33,15 @@ function renderStatic(){
  document.getElementById('language-button').setAttribute('aria-label',translate('Change language')+': '+languages[current].label);
  document.getElementById('language-menu').setAttribute('aria-label',translate('Language'));
  document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-checked',String(button.dataset.language===current)));
+ arrangeScience();
 }
 export function initializeLanguage(){
+ for(const selector of ['.simulation-heading','.lab-roadmap','.existing-strip','.agent-trace']){
+  const element=document.querySelector(selector);
+  const originalPosition=document.createComment('English reading order: '+selector);
+  element.before(originalPosition);
+  scienceBlocks.push({element,originalPosition});
+ }
  for(const attribute of ['src','srcset','href'])document.querySelectorAll(`[${attribute}$=".svg"]`).forEach(element=>diagrams.push({element,attribute,source:element.getAttribute(attribute)}));
  const trigger=document.getElementById('language-button'),menu=document.getElementById('language-menu');
  const options=[...menu.querySelectorAll('[data-language]')];
