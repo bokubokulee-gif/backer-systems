@@ -13,6 +13,12 @@ node --test tests/*.test.mjs
 node scripts/build.mjs
 ```
 
+The default build uses absolute social-card URLs for Vercel. For GitHub Pages,
+run `SITE_URL=https://bokubokulee-gif.github.io/backer-systems/ node scripts/build.mjs`.
+Both builds include the same bundled banner. Existing English, Chinese, Japanese
+and Korean `?lang=` URLs remain unchanged and all receive the banner. Social crawlers
+receive the English title and description because these languages render in JavaScript.
+
 Only the audited `dist/` static output is published. Fonts and the Backer mark are bundled. No connection to another Backer site or backend is required.
 
 The numerical examples are synthetic and show mechanisms, not measured predictive accuracy, live trading or forecast revenue. Market, creator-fee and perpetual architectures retain their current/proposed status in the presentation.
