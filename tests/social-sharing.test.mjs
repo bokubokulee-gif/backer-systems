@@ -37,7 +37,7 @@ test('public audit exceptions reject arbitrary external links and unapproved met
   `<meta property="og:image" content="${base}private/card.png">`,
   `<meta property="og:url" content="${base}private/">`,
   `<meta name="twitter:image" content="${base}${imagePath}?secret=value">`
- ])assert.match(withoutApprovedMetadataUrls(snippet),/https:\/\//);
+ ])assert.match(withoutApprovedMetadataUrls(`<html><head>${snippet}</head></html>`),/https:\/\//);
  assert.throws(()=>resolveSiteBase('https://unapproved.example'),/Unapproved/);
 });
 
@@ -47,4 +47,21 @@ test('bundled social card is a 1200 by 630 PNG within the crawler size limit',as
  assert.equal(image.readUInt32BE(16),1200);
  assert.equal(image.readUInt32BE(20),630);
  assert.ok(image.length<5*1024*1024);
+});
+
+test('metadata-shaped text in scripts, styles, comments or body remains audit-visible',()=>{
+ const meta=`<meta property="og:url" content="${siteBases.vercel}">`;
+ for(const source of [
+  `<html><head><script>const value = '${meta}';</script></head></html>`,
+  `<html><head><style>body::after { content: '${meta}'; }</style></head></html>`,
+  `<html><head><!-- ${meta} --></head></html>`,
+  `<html><head><title>${meta}</title></head></html>`,
+  `<html><head><template>${meta}</template></head></html>`,
+  `<html><head></head><body>${meta}</body></html>`,
+  `<html><head></head><body><head>${meta}</head></body></html>`,
+  `<!-- <head> -->${meta}<!-- </head> -->`,
+  `<html><head><div>${meta}</div></html>`,
+  `<html><head>body text${meta}</html>`
+ ])assert.match(withoutApprovedMetadataUrls(source),/https:\/\//,source);
+ assert.doesNotMatch(withoutApprovedMetadataUrls(`<html><head>${meta}</head><body></body></html>`),/https:\/\//);
 });

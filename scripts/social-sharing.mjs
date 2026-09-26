@@ -41,7 +41,21 @@ export async function buildSocialSharing(output,catalogs,base=resolveSiteBase())
 export function withoutApprovedMetadataUrls(source){
  const imageUrls=Object.values(siteBases).map(base=>new URL(imagePath,base).href);
  const pageUrls=Object.values(siteBases);
- return source.replace(/<meta (property|name)="([^"]+)" content="([^"]+)">/g,(tag,attribute,key,value)=>{
+ // Tokenize comments and raw-text elements as opaque blocks so metadata-shaped
+ // text inside them cannot gain an exception. Only the first document head counts.
+ const tokens=/<!--[\s\S]*?(?:-->|$)|<(script|style|title|textarea|xmp|iframe|noembed|noframes|template)\b(?:[^>"']|"[^"]*"|'[^']*')*>[\s\S]*?(?:<\/\1\s*>|$)|<(?:[^<>"']|"[^"]*"|'[^']*')*>/gi;
+ let headState='before',cursor=0;
+ return source.replace(tokens,(tag,rawElement,offset)=>{
+  if(headState==='inside'&&source.slice(cursor,offset).trim())headState='after';
+  cursor=offset+tag.length;
+  if(tag.startsWith('<!--')||rawElement)return tag;
+  if(headState==='before'&&/^<head(?:\s[^>]*)?>$/i.test(tag)){headState='inside';return tag;}
+  if(/^<\/?(?:head|body)\b/i.test(tag)){headState='after';return tag;}
+  if(headState!=='inside')return tag;
+  if(!/^<(?:meta|link|base)\b/i.test(tag)){headState='after';return tag;}
+  const match=tag.match(/^<meta (property|name)="([^"]+)" content="([^"]+)">$/);
+  if(!match)return tag;
+  const [,attribute,key,value]=match;
   const isImage=(attribute==='property'&&['og:image','og:image:secure_url'].includes(key))||(attribute==='name'&&key==='twitter:image');
   if(isImage&&imageUrls.includes(value))return '';
   if(attribute==='property'&&key==='og:url'&&pageUrls.includes(value))return '';
