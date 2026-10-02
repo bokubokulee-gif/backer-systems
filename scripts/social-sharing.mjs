@@ -6,7 +6,7 @@ export const siteBases=Object.freeze({
  vercel:'https://backer-systems.vercel.app/',
  github:'https://bokubokulee-gif.github.io/backer-systems/'
 });
-export const imagePath='img/backer-social-20260926.png';
+export const imagePath='img/backer-social-20261002.png';
 const locales={en:'en_US',zh:'zh_CN',ja:'ja_JP',ko:'ko_KR'};
 const xml=value=>value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 export function resolveSiteBase(value=process.env.SITE_URL||siteBases.vercel){
@@ -22,7 +22,7 @@ export function metadata(catalog,code,base,filename){
   ['property','og:url',url],['property','og:locale',locales[code]],
   ...localeCodes.filter(other=>other!==code).map(other=>['property','og:locale:alternate',locales[other]]),
   ['property','og:image',image],['property','og:image:secure_url',image],
-  ['property','og:image:type','image/png'],['property','og:image:width','1200'],['property','og:image:height','630'],
+  ['property','og:image:type','image/png'],['property','og:image:width','3840'],['property','og:image:height','2016'],
   ['property','og:image:alt','Backer AI — Predict where attention flows. Simulation science. Better decisions.'],
   ['name','twitter:card','summary_large_image'],['name','twitter:site','@backer_ai'],
   ['name','twitter:title',catalog.h001],['name','twitter:description',catalog.h002],

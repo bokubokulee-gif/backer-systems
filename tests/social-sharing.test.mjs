@@ -41,11 +41,11 @@ test('public audit exceptions reject arbitrary external links and unapproved met
  assert.throws(()=>resolveSiteBase('https://unapproved.example'),/Unapproved/);
 });
 
-test('bundled social card is a 1200 by 630 PNG within the crawler size limit',async()=>{
+test('bundled social card is a 4K PNG within the crawler size limit',async()=>{
  const image=await readFile(path.join(root,'public',imagePath));
  assert.equal(image.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
- assert.equal(image.readUInt32BE(16),1200);
- assert.equal(image.readUInt32BE(20),630);
+ assert.equal(image.readUInt32BE(16),3840);
+ assert.equal(image.readUInt32BE(20),2016);
  assert.ok(image.length<5*1024*1024);
 });
 
