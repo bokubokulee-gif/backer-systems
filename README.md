@@ -33,3 +33,17 @@ The numerical examples are synthetic and show mechanisms, not measured predictiv
 - `scripts/build.mjs`: public-artifact validation and static packaging.
 
 GitHub Pages serves the audited static output from the `gh-pages` branch. Vercel serves the same static output. Internal working documents and reference materials are excluded from the repository and deployment.
+
+## Shared view display
+
+The header carries the same amber-dot count in all four languages. The shared
+`public/assets/backer-view-count-core.js` schedule preserves 2,560 on 10 October
+2026 UTC and adds one reproducible pseudorandom amount from 6 through 23 after
+each completed UTC day. All hosts compute the same cumulative count, including
+when a visitor returns after several days; no daily deployment is needed.
+
+This is a scheduled display, not measured traffic, as disclosed in its accessible
+label and hover text. The renderer refreshes at midnight, on tab focus and when a
+page returns from the browser cache. The badge makes no network requests and
+stores no visitor information. Its scripts and CSS are content-versioned during
+build, bundled locally, and included in the public-artifact audit.
