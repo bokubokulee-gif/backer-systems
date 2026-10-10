@@ -1,0 +1,39 @@
+/* Match the existing Backer logo lockup and reference counter. */
+.backer-brand-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: max-content;
+  line-height: 1;
+}
+.backer-brand-lockup > a { flex: none; }
+.backer-view-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 20px;
+  margin-top: 5px;
+  color: var(--backer-view-count-color, var(--muted, #9b958b));
+  font-family: var(--mono, 'JetBrains Mono', ui-monospace, monospace);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 20px;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-decoration: none;
+}
+.backer-view-count::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--backer-view-count-accent, #e9bd86);
+}
+@media (max-width: 460px) {
+  .backer-view-count { font-size: 13px; letter-spacing: 0; }
+}
