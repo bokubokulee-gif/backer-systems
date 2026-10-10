@@ -50,6 +50,6 @@ export async function versionRuntime(output){
  }
  const filename=path.join(output,'index.html');
  let source=await readFile(filename,'utf8');
- for(const file of ['style.css','app.mjs'])source=source.replace('"'+file+'"','"'+file+'?v='+await hash(file)+'"');
+ for(const file of ['style.css','app.mjs','assets/backer-view-count-core.js','assets/backer-view-count.js','assets/backer-view-count.css'])source=source.replace('"'+file+'"','"'+file+'?v='+await hash(file)+'"');
  await writeFile(filename,source);
 }
